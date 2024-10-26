@@ -108,13 +108,7 @@ body {
 /* end of carousel */
 
 
-.back-to-top {
-  position: fixed;
-  display: none;
-  right: 45px;
-  bottom: 45px;
-  z-index: 99;
-}
+
 
 /*** Section Title ***/
 .section-title {
@@ -150,5 +144,5 @@ body {
 }
 
 .map-container {
-  height: 300px; /* Set to your desired height */
+  height: 370px; /* Set to your desired height */
 }

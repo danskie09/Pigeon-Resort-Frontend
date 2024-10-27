@@ -189,3 +189,106 @@ body {
 }
 /* end of room styles */
 
+
+
+/* Gallery slider start */
+
+.intro {margin-bottom: 36px;
+  text-align: center;}
+  
+  .intro p {
+      max-width: 500px;
+  }
+  .intro h6{
+      color: var(--brand);
+      font-weight: 400;
+      text-transform: uppercase;
+  }
+  
+  .intro h1 {
+      margin-top: 15px;
+      margin-bottom: 15px;
+  }
+
+  .project {
+    position: relative;
+    overflow: hidden;
+    z-index: 2;
+}
+
+.project h6 {
+    font-weight: 400;
+}
+
+.project h6::before {
+    content: "";
+    height: 2px;
+    width: 30px;
+    display: inline-block;
+    background: var(--brand);
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+
+.project .overlay {
+    width: 100%;
+    height: 220px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(180deg, rgba(255, 76, 41, 0) 0%, var(--dark) 100%);
+}
+
+.project .content {
+    position: absolute;
+    left: 10%;
+    bottom: 10%
+}
+
+.project h2,
+.project h6 {
+    color: #fff;
+}
+
+#projects-slider .project img {
+  height: 400px; /* Set the desired height */
+  object-fit: cover; /* Maintains aspect ratio while covering the area */
+}
+
+/* gallery slider end */
+
+
+/* video start */
+.hero-section {
+  padding: 80px 0;
+  background-color: #f8f9fa;
+  min-height: 100vh;
+}
+
+.hero-content h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.hero-content p {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 315px;
+}
+
+.video-wrapper iframe {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 315px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+/* video end */

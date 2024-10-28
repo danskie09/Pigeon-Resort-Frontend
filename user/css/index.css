@@ -261,9 +261,9 @@ body {
 
 /* video start */
 .hero-section {
-  padding: 80px 0;
+  padding: 50px 0;
   background-color: #f8f9fa;
-  min-height: 100vh;
+  
 }
 
 .hero-content h1 {

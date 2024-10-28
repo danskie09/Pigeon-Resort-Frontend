@@ -553,7 +553,7 @@
 
 
     <!-- Video Start -->
-    <section class="hero-section mt-0">
+    <section class="hero-section mt-0 mb-0">
         <div class="container mt-0">
             <div class="row align-items-center">
                 <!-- Left side content -->
@@ -562,7 +562,7 @@
                     <p class="lead text-muted">
                         Immerse yourself in the natural beauty and charm of Valencia, Negros Oriental. Explore our scenic surroundings, unwind in our premium rooms, and enjoy a glimpse of your next escape through the video.
                     </p>
-                    <div class="d-flex gap-3">
+                    <div class="d-flex gap-3 mb-2 ">
                         <button class="btn btn-primary">Get Started</button>
                         <button class="btn btn-outline-secondary">Learn More</button>
                     </div>
@@ -583,6 +583,61 @@
         </div>
     </section>
     <!-- Video Start -->
+
+
+    <!-- contact us -->
+    <div class="text-center mb-2">
+        <h6 class="section-title text-center text-primary text-uppercase" >Contact us</h6>
+    </div>
+
+    <div class="container-xxl py-6">
+        <div class="container mb-3 py-6">
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-6">
+                    <div class="position-relative overflow-hidden rounded">
+                        <img src="../assets/images/mansion.webp" alt="Contact Us" class="img-fluid w-100">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <form action="https://api.web3forms.com/submit" method="POST">
+                        <div class="row g-3">
+                            <input type="hidden" name="access_key" value="df515f5b-80bf-48fd-b50e-c5e8628f41a1">
+                            
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="name" class="form-label">Your Name</label>
+                                    <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name" required>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label for="email" class="form-label">Your Email</label>
+                                    <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email" required>
+                                </div>
+                            </div>
+                            
+                            <div class="col-12">
+                                <div class="mb-3">
+                                    <label for="message" class="form-label">Your Message</label>
+                                    <textarea class="form-control" id="message" name="message" rows="5" placeholder="Type your message here" required></textarea>
+                                </div>
+                            </div>
+                            
+                            <div class="col-12 d-flex justify-content-center">
+                                <button type="submit" class="btn btn-primary w-25 py-3">Send</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    
+
+    <!-- contact end -->
 
 
    
@@ -647,6 +702,9 @@ $(document).ready(function () {
         autoplayTimeout: 4000,
     })
 });
+
+
+
 
   </script>
 </body>

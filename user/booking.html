@@ -6,267 +6,276 @@
     <link rel="icon" href="../assets/images/logo.webp" type="image/webp">
     <title>Pigeon Resort | Booking Form</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
-    <style>
-        :root {
-            --primary-blue: #1a73e8;
-            --secondary-blue: #4285f4;
-            --accent-orange: #ff7043;
-        }
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
-        .booking-form {
-            max-width: 800px;
-            margin: 2rem auto;
-            padding: 2rem;
-            border-radius: 15px;
-            box-shadow: 0 0 20px rgba(0,0,0,0.1);
-        }
-
-        .form-control:focus, .form-select:focus {
-            border-color: var(--primary-blue);
-            box-shadow: 0 0 0 0.2rem rgba(26,115,232,0.25);
-        }
-
-        .btn-primary {
-            background-color: var(--primary-blue);
-            border-color: var(--primary-blue);
-        }
-
-        .btn-primary:hover {
-            background-color: var(--secondary-blue);
-        }
-
-        .accent-heading {
-            color: var(--primary-blue);
-            border-bottom: 3px solid var(--accent-orange);
-            padding-bottom: 0.5rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .price-display {
-            background-color: var(--accent-orange);
-            color: white;
-            padding: 1rem;
-            border-radius: 8px;
-            font-size: 1.25rem;
-            margin-top: 1rem;
-        }
-
-        .payment-section {
-            border: 1px solid #dee2e6;
-            border-radius: 8px;
-            padding: 1.5rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .qr-section {
-            text-align: center;
-            margin-top: 1rem;
-            display: none;
-        }
-
-        .qr-code {
-            max-width: 250px;
-            margin: 1rem auto;
-            padding: 1rem;
-            border: 2px solid var(--primary-blue);
-            border-radius: 8px;
-        }
-
-        .proof-upload {
-            display: none;
-        }
-
-        .payment-instructions {
-            background-color: #f8f9fa;
-            padding: 1rem;
-            border-radius: 8px;
-            margin-top: 1rem;
-            font-size: 0.9rem;
-        }
-
-        .image-preview {
-            max-width: 200px;
-            max-height: 200px;
-            margin-top: 1rem;
-            border: 2px solid var(--primary-blue);
-            border-radius: 8px;
-            display: none;
-        }
-    </style>
+    <link rel="stylesheet" href="../user/css/booking.css">
 </head>
 <body class="bg-light">
-    <div class="container">
-        <div class="booking-form bg-white">
-            <h2 class="accent-heading">Room Booking</h2>
+    <div class="container py-5">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card shadow">
+                    <!-- Header with background and thumbnails -->
+                    <div class="booking-header">
+                        <div class="header-background">
+                            <img src="../assets/images/pigeon-bg.webp" alt="Beautiful beach background">
+                        </div>
+                        <div class="image-thumbnails">
+                            <div class="thumbnail">
+                                <img src="../assets/images/gallery01.webp" alt="Hotel room 1">
+                            </div>
+                            <div class="thumbnail">
+                                <img src="../assets/images/carousel2.webp" alt="Hotel room 2">
+                            </div>
+                            <div class="thumbnail">
+                                <img src="../assets/images/gallery02.webp" alt="Hotel facilities">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card-body p-4">
+                        <h2 class="text-center mb-4">Room Booking</h2>
+                        <p class="text-center text-muted mb-4">Experience something new every moment</p>
+
+                        <form id="bookingForm">
+                            <!-- Basic booking details -->
+                            <div class="row mb-4">
+                                <!-- Replace the existing room selection div in your form -->
+<div class="row mb-4">
+    <div class="col-12">
+        <label class="form-label mb-3">Select Room <span class="text-danger">*</span></label>
+        <div class="row g-4">
+            <!-- Deluxe Room -->
+            <div class="col-md-4">
+                <div class="card room-card h-100">
+                    <input type="radio" class="btn-check" name="roomType" id="room1" value="1" required>
+                    <label class="btn card-body p-0" for="room1">
+                        <img src="../assets/images/room101.webp" class="card-img-top" alt="Deluxe Room" style="height: 200px; object-fit: cover;">
+                        <div class="p-3">
+                            <h5 class="card-title">Deluxe Room</h5>
+                            <ul class="list-unstyled mb-0">
+                                <li><i class="bi bi-people-fill"></i> Max 2 Adults</li>
+                                <li><i class="bi bi-wifi"></i> Free WiFi</li>
+                                <li><i class="bi bi-tv"></i> Smart TV</li>
+                            </ul>
+                        </div>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Superior Room -->
+            <div class="col-md-4">
+                <div class="card room-card h-100">
+                    <input type="radio" class="btn-check" name="roomType" id="room2" value="2" required>
+                    <label class="btn card-body p-0" for="room2">
+                        <img src="../assets/images/room102.webp" class="card-img-top" alt="Superior Room" style="height: 200px; object-fit: cover;">
+                        <div class="p-3">
+                            <h5 class="card-title">Superior Room</h5>
+                            <ul class="list-unstyled mb-0">
+                                <li><i class="bi bi-people-fill"></i> Max 3 Adults</li>
+                                <li><i class="bi bi-wifi"></i> Free WiFi</li>
+                                <li><i class="bi bi-tv"></i> Smart TV</li>
+                            </ul>
+                        </div>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Executive Suite -->
+            <div class="col-md-4">
+                <div class="card room-card h-100">
+                    <input type="radio" class="btn-check" name="roomType" id="room3" value="3" required>
+                    <label class="btn card-body p-0" for="room3">
+                        <img src="../assets/images/room103.webp" class="card-img-top" alt="Executive Suite" style="height: 200px; object-fit: cover;">
+                        <div class="p-3">
+                            <h5 class="card-title">Executive Suite</h5>
+                            <ul class="list-unstyled mb-0">
+                                <li><i class="bi bi-people-fill"></i> Max 4 Adults</li>
+                                <li><i class="bi bi-wifi"></i> Free WiFi</li>
+                                <li><i class="bi bi-tv"></i> Smart TV</li>
+                            </ul>
+                        </div>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <!-- Add invalid feedback for form validation -->
+        <div class="invalid-feedback">
+            Please select a room type.
+        </div>
+    </div>
+</div>
+                                <div class="col-md-6">
+                                    <div class="mb-3">
+                                        <label for="bookingNumber" class="form-label">Booking Number</label>
+                                        <input type="text" class="form-control" id="bookingNumber" readonly>
+                                    </div>
+                                </div>
+                            </div>
             
-            <form id="bookingForm">
-                <!-- Basic booking details -->
-                <div class="row mb-4">
-                    <div class="col-md-6">
-                        <div class="mb-3">
-                            <label for="room" class="form-label">Select Room</label>
-                            <select class="form-select" id="room" required>
-                                <option value="">Choose a room...</option>
-                                <option value="1">Deluxe Room</option>
-                                <option value="2">Superior Room</option>
-                                <option value="3">Executive Suite</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="mb-3">
-                            <label for="bookingNumber" class="form-label">Booking Number</label>
-                            <input type="text" class="form-control" id="bookingNumber" readonly>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Dates -->
-                <div class="row mb-4">
-                    <div class="col-md-6">
-                        <div class="mb-3">
-                            <label for="checkIn" class="form-label">Check-in Date & Time</label>
-                            <input type="text" class="form-control" id="checkIn" required>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="mb-3">
-                            <label for="checkOut" class="form-label">Check-out Date & Time</label>
-                            <input type="text" class="form-control" id="checkOut" required>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Guests -->
-                <div class="row mb-4">
-                    <div class="col-md-6">
-                        <div class="mb-3">
-                            <label for="adult" class="form-label">Number of Adults</label>
-                            <input type="number" class="form-control" id="adult" min="1" required>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="mb-3">
-                            <label for="kids" class="form-label">Number of Children</label>
-                            <input type="number" class="form-control" id="kids" min="0">
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Payment Section -->
-                <div class="payment-section">
-                    <h4 class="mb-3">Payment Method</h4>
-                    
-                    <div class="form-check mb-3">
-                        <input class="form-check-input" type="radio" name="paymentMethod" id="cashPayment" value="cash" checked>
-                        <label class="form-check-label" for="cashPayment">
-                            Cash on Hand
-                        </label>
-                    </div>
-                    
-                    <div class="form-check mb-3">
-                        <input class="form-check-input" type="radio" name="paymentMethod" id="gcashPayment" value="gcash">
-                        <label class="form-check-label" for="gcashPayment">
-                            GCash
-                        </label>
-                    </div>
-
-                    <!-- GCash QR Section -->
-                    <div id="gcashQRSection" class="qr-section">
-                        <div class="alert alert-info">
-                            Scan this QR code to pay via GCash
-                        </div>
-                        <img src="../assets/images/gcash-qr.png.png" alt="GCash QR Code" class="qr-code" style="width: 200px; height: 210px;">
-                        <div class="payment-instructions">
-                            <h5>Payment Instructions:</h5>
-                            <ol>
-                                <li>Open your GCash app</li>
-                                <li>Scan the QR code above</li>
-                                <li>Enter the exact amount: ₱<span id="gcashAmount">0.00</span></li>
-                                <li>Complete the payment</li>
-                                <li>Upload your payment screenshot below</li>
-                            </ol>
-                        </div>
+                            <!-- Dates -->
+                            <div class="row mb-4">
+                                <div class="col-md-6">
+                                    <div class="mb-3">
+                                        <label for="checkIn" class="form-label">Check-in Date & Time</label>
+                                        <input type="text" class="form-control" id="checkIn" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="mb-3">
+                                        <label for="checkOut" class="form-label">Check-out Date & Time</label>
+                                        <input type="text" class="form-control" id="checkOut" required>
+                                    </div>
+                                </div>
+                            </div>
+            
+                            <!-- Guests -->
+                            <div class="row mb-4">
+                                <div class="col-md-6">
+                                    <div class="mb-3">
+                                        <label for="adult" class="form-label">Number of Adults</label>
+                                        <input type="number" class="form-control" id="adult" min="1" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="mb-3">
+                                        <label for="kids" class="form-label">Number of Children</label>
+                                        <input type="number" class="form-control" id="kids" min="0">
+                                    </div>
+                                </div>
+                            </div>
+            
+                            <!-- Payment Section -->
+                            <div class="payment-section">
+                                <h4 class="mb-3">Payment Method</h4>
+                                
+                                <div class="form-check mb-3">
+                                    <input class="form-check-input" type="radio" name="paymentMethod" id="cashPayment" value="cash" checked>
+                                    <label class="form-check-label" for="cashPayment">
+                                        Cash on Hand
+                                    </label>
+                                </div>
+                                
+                                <div class="form-check mb-3">
+                                    <input class="form-check-input" type="radio" name="paymentMethod" id="gcashPayment" value="gcash">
+                                    <label class="form-check-label" for="gcashPayment">
+                                        GCash
+                                    </label>
+                                </div>
+            
+                                <!-- GCash QR Section -->
+                                <div id="gcashQRSection" class="qr-section">
+                                    <div class="alert alert-info">
+                                        Scan this QR code to pay via GCash
+                                    </div>
+                                    <img src="../assets/images/gcash-qr.png.png" alt="GCash QR Code" class="qr-code" style="width: 200px; height: 210px;">
+                                    <div class="payment-instructions">
+                                        <h5>Payment Instructions:</h5>
+                                        <ol>
+                                            <li>Open your GCash app</li>
+                                            <li>Scan the QR code above</li>
+                                            <li>Enter the exact amount: ₱<span id="gcashAmount">0.00</span></li>
+                                            <li>Complete the payment</li>
+                                            <li>Upload your payment screenshot below</li>
+                                        </ol>
+                                    </div>
+                                    
+                                    <div class="proof-upload mt-3">
+                                        <label for="paymentProof" class="form-label">Upload Payment Screenshot</label>
+                                        <input type="file" class="form-control" id="paymentProof" accept="image/*">
+                                        <img id="proofPreview" class="image-preview">
+                                    </div>
+                                </div>
+                            </div>
+            
+                            <!-- Special Request -->
+                            <div class="mb-4">
+                                <label for="specialRequest" class="form-label">Special Requests</label>
+                                <textarea class="form-control" id="specialRequest" rows="3"></textarea>
+                            </div>
+            
+                            <!-- Total Amount -->
+                            <div class="price-display mb-4">
+                                Total Amount: ₱<span id="totalAmount">0.00</span>
+                            </div>
+            
+                            <button type="submit" class="btn btn-primary btn-lg w-100">Confirm Booking</button>
+                        </form>
                         
-                        <div class="proof-upload mt-3">
-                            <label for="paymentProof" class="form-label">Upload Payment Screenshot</label>
-                            <input type="file" class="form-control" id="paymentProof" accept="image/*">
-                            <img id="proofPreview" class="image-preview">
-                        </div>
                     </div>
                 </div>
-
-                <!-- Special Request -->
-                <div class="mb-4">
-                    <label for="specialRequest" class="form-label">Special Requests</label>
-                    <textarea class="form-control" id="specialRequest" rows="3"></textarea>
-                </div>
-
-                <!-- Total Amount -->
-                <div class="price-display mb-4">
-                    Total Amount: ₱<span id="totalAmount">0.00</span>
-                </div>
-
-                <button type="submit" class="btn btn-primary btn-lg w-100">Confirm Booking</button>
-            </form>
+            </div>
         </div>
     </div>
 
-    <!-- Scripts -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
     <script>
-        // Initialize date pickers
-        flatpickr("#checkIn", {
-            enableTime: true,
-            dateFormat: "Y-m-d H:i",
-            minDate: "today",
-            onChange: calculateTotal
-        });
+      // Initialize date pickers
+flatpickr("#checkIn", {
+    enableTime: true,
+    dateFormat: "Y-m-d H:i",
+    minDate: "today"
+});
 
-        flatpickr("#checkOut", {
-            enableTime: true,
-            dateFormat: "Y-m-d H:i",
-            minDate: "today",
-            onChange: calculateTotal
-        });
+flatpickr("#checkOut", {
+    enableTime: true,
+    dateFormat: "Y-m-d H:i",
+    minDate: "today"
+});
 
-        // Generate booking number
-        document.getElementById('bookingNumber').value = 'BK' + Date.now();
+// Generate booking number when page loads
+document.addEventListener('DOMContentLoaded', function() {
+    generateBookingNumber();
+});
 
-        // Handle payment method change
-        document.querySelectorAll('input[name="paymentMethod"]').forEach(radio => {
-            radio.addEventListener('change', function() {
-                const gcashSection = document.getElementById('gcashQRSection');
-                const proofUpload = document.querySelector('.proof-upload');
-                
-                if (this.value === 'gcash') {
-                    gcashSection.style.display = 'block';
-                    proofUpload.style.display = 'block';
-                } else {
-                    gcashSection.style.display = 'none';
-                    proofUpload.style.display = 'none';
-                }
-            });
-        });
+// Generate unique booking number
+function generateBookingNumber() {
+    const timestamp = new Date().getTime();
+    const random = Math.floor(Math.random() * 1000).toString().padStart(3, '0');
+    const bookingNumber = `BK${timestamp}${random}`;
+    document.getElementById('bookingNumber').value = bookingNumber;
+}
 
-        // Preview uploaded image
-        document.getElementById('paymentProof').addEventListener('change', function(e) {
-            const preview = document.getElementById('proofPreview');
-            const file = e.target.files[0];
-            const reader = new FileReader();
+// Handle payment method change
+document.querySelectorAll('input[name="paymentMethod"]').forEach(radio => {
+    radio.addEventListener('change', function() {
+        const gcashSection = document.getElementById('gcashQRSection');
+        const proofUpload = document.querySelector('.proof-upload');
+        
+        if (this.value === 'gcash') {
+            gcashSection.style.display = 'block';
+            proofUpload.style.display = 'block';
+        } else {
+            gcashSection.style.display = 'none';
+            proofUpload.style.display = 'none';
+        }
+    });
+});
 
-            reader.onload = function(e) {
-                preview.src = e.target.result;
-                preview.style.display = 'block';
-            }
+// Handle image preview
+document.getElementById('paymentProof').addEventListener('change', function(e) {
+    const preview = document.getElementById('proofPreview');
+    const file = e.target.files[0];
+    const reader = new FileReader();
 
-            if (file) {
-                reader.readAsDataURL(file);
-            }
-        });
+    reader.onload = function(e) {
+        preview.src = e.target.result;
+        preview.style.display = 'block';
+    }
 
+    if (file) {
+        reader.readAsDataURL(file);
+    }
+});
+
+// Form submission handler
+document.getElementById('bookingForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    alert('Booking submitted successfully!');
+});
        
     </script>
 </body>

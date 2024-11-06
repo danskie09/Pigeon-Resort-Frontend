@@ -81,6 +81,47 @@ body {
     outline: none;
     box-shadow: 0 0 0 4px rgba(0, 123, 255, 0.5);
   }
+
+  .btn-signup {
+    background-color: none; /* Change to your desired color */
+    color: gray;
+    border-color: var(--light-orange);
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .btn-signup:hover {
+    background-color: var(--light-orange); /* Darker shade for hover effect */
+    transform: scale(1.05);
+    color: #fff; /* Ensures text remains visible */
+  }
+  
+  .btn-signup:focus {
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(0, 123, 255, 0.5);
+  }
+
+  .btn-book {
+    background-color: var(--accent-orange); /* Change to your desired color */
+    color: whitesmoke;
+   
+    padding: 8px 15px;
+    border-radius: 5px;
+    
+    
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .btn-book:hover {
+    background-color: var(--light-orange); /* Darker shade for hover effect */
+    transform: scale(1.05);
+    color: #fff; /* Ensures text remains visible */
+  }
+  
+ 
   
   
       /* CUSTOMIZE THE CAROUSEL
@@ -92,9 +133,12 @@ body {
   }
   /* Since positioning the image, we need to help out the caption */
   .carousel-caption {
-    bottom: 3rem;
-    z-index: 10;
+    padding: 70px;
+    font-weight: 500;
+    z-index: 100;
   }
+
+ 
   
   /* Declare heights because of positioning of img element */
   .carousel-item {

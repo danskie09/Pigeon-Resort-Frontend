@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../assets/images/logo.webp" type="image/webp">
+    <title>Pigeon Resort | Reservation Form</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../user/css/reservation.css">
+</head>
+<body class="bg-light">
+<!-- TOP NAV -->
+<div class="top-nav" id="home">
+    <div class="container">
+        <div class="row justify-content-between">
+            <div class="col-auto">
+                <p> <i class='bx bxs-envelope'></i> pigeonresort@gmail.com</p>
+                <p> <i class='bx bxs-phone-call'></i>0917 726 9260</p>
+            </div>
+            <div class="col-auto social-icons">
+                <a href="https://web.facebook.com/pigeonresort/"><i class='bx bxl-facebook'></i></a>
+                <a href="#"><i class='bx bxl-twitter'></i></a>
+                <a href="#"><i class='bx bxl-instagram'></i></a>
+                <a href="#"><i class='bx bxl-pinterest'></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- BOTTOM NAV -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
+    <div class="container">
+        <a class="navbar-brand" href="#">
+            <img src="../assets/images/logo.webp" alt="Pigeon Resort Logo" class="logo-image" style="width: 100px; height: 55px;">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link d-flex align-items-center" href="reservation.html">
+                        <i class='bx bx-bookmark me-2' style="font-size: 20px; color: orange;"></i>
+                        <span>Reservation</span>
+                    </a>
+                </li>
+                
+
+              
+        </div>
+    </div>
+</nav>
+
+<!-- end of nav -->
+
+    <div class="container py-5">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card shadow">
+                    <!-- Header with background and thumbnails -->
+                    <div class="reservation-header">
+                        <div class="header-background">
+                            <img src="../assets/images/pigeon-bg.webp" alt="Beautiful beach background">
+                        </div>
+                        <div class="image-thumbnails">
+                            <div class="thumbnail">
+                                <img src="../assets/images/gallery01.webp" alt="Hotel room 1">
+                            </div>
+                            <div class="thumbnail">
+                                <img src="../assets/images/carousel2.webp" alt="Hotel room 2">
+                            </div>
+                            <div class="thumbnail">
+                                <img src="../assets/images/gallery02.webp" alt="Hotel facilities">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card-body p-4">
+                        <h2 class="text-center mb-4">Make Your Reservation</h2>
+                        <p class="text-center text-muted mb-4">Experience something new every moment</p>
+
+                        <form id="reservationForm">
+                            <!-- Basic reservation details -->
+                            <div class="row mb-4">
+                                <!-- Replace the existing room selection div in your form -->
+<div class="row mb-4">
+    <div class="col-12">
+        <label class="form-label mb-3">Select Room <span class="text-danger">*</span></label>
+        <div class="row g-4">
+            <!-- Deluxe Room -->
+            <div class="col-md-4">
+                <div class="card room-card h-100">
+                    <input type="radio" class="btn-check" name="roomType" id="room1" value="1" required>
+                    <label class="btn card-body p-0" for="room1">
+                        <img src="../assets/images/room101.webp" class="card-img-top" alt="Deluxe Room" style="height: 200px; object-fit: cover;">
+                        <div class="p-3">
+                            <h5 class="card-title">Deluxe Room</h5>
+                            <ul class="list-unstyled mb-0">
+                                <li><i class="bi bi-people-fill"></i> Max 2 Adults</li>
+                                <li><i class="bi bi-wifi"></i> Free WiFi</li>
+                                <li><i class="bi bi-tv"></i> Smart TV</li>
+                            </ul>
+                        </div>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Superior Room -->
+            <div class="col-md-4">
+                <div class="card room-card h-100">
+                    <input type="radio" class="btn-check" name="roomType" id="room2" value="2" required>
+                    <label class="btn card-body p-0" for="room2">
+                        <img src="../assets/images/room102.webp" class="card-img-top" alt="Superior Room" style="height: 200px; object-fit: cover;">
+                        <div class="p-3">
+                            <h5 class="card-title">Superior Room</h5>
+                            <ul class="list-unstyled mb-0">
+                                <li><i class="bi bi-people-fill"></i> Max 3 Adults</li>
+                                <li><i class="bi bi-wifi"></i> Free WiFi</li>
+                                <li><i class="bi bi-tv"></i> Smart TV</li>
+                            </ul>
+                        </div>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Executive Suite -->
+            <div class="col-md-4">
+                <div class="card room-card h-100">
+                    <input type="radio" class="btn-check" name="roomType" id="room3" value="3" required>
+                    <label class="btn card-body p-0" for="room3">
+                        <img src="../assets/images/room103.webp" class="card-img-top" alt="Executive Suite" style="height: 200px; object-fit: cover;">
+                        <div class="p-3">
+                            <h5 class="card-title">Executive Suite</h5>
+                            <ul class="list-unstyled mb-0">
+                                <li><i class="bi bi-people-fill"></i> Max 4 Adults</li>
+                                <li><i class="bi bi-wifi"></i> Free WiFi</li>
+                                <li><i class="bi bi-tv"></i> Smart TV</li>
+                            </ul>
+                        </div>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <!-- Add invalid feedback for form validation -->
+        <div class="invalid-feedback">
+            Please select a room type.
+        </div>
+    </div>
+</div>
+                                <div class="col-md-6">
+                                    <div class="mb-3">
+                                        <label for="reservationNumber" class="form-label">Reservation Number</label>
+                                        <input type="text" class="form-control" id="reservationNumber" readonly>
+                                    </div>
+                                </div>
+                            </div>
+            
+                            <!-- Dates -->
+                            <div class="row mb-4">
+                                <div class="col-md-6">
+                                    <div class="mb-3">
+                                        <label for="checkIn" class="form-label">Check-in Date & Time</label>
+                                        <input type="text" class="form-control" id="checkIn" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="mb-3">
+                                        <label for="checkOut" class="form-label">Check-out Date & Time</label>
+                                        <input type="text" class="form-control" id="checkOut" required>
+                                    </div>
+                                </div>
+                            </div>
+            
+                            <!-- Guests -->
+                            <div class="row mb-4">
+                                <div class="col-md-6">
+                                    <div class="mb-3">
+                                        <label for="adult" class="form-label">Number of Adults</label>
+                                        <input type="number" class="form-control" id="adult" min="1" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="mb-3">
+                                        <label for="kids" class="form-label">Number of Children</label>
+                                        <input type="number" class="form-control" id="kids" min="0">
+                                    </div>
+                                </div>
+                            </div>
+
+
+                             <!-- Additional Services Section -->
+                             <div class="mb-4">
+                                <h5 class="border-bottom pb-2">Additional Services</h5>
+                                <div class="row g-3">
+                                    <!-- Service Card 1 -->
+                                    <div class="col-md-6">
+                                        <div class="card h-100">
+                                            <div class="card-body">
+                                                <div class="form-check d-flex justify-content-between align-items-center">
+                                                    <div>
+                                                        <input class="form-check-input" type="checkbox" name="services[]" value="1">
+                                                        <label class="form-check-label">
+                                                            Extra Vehicle Parking
+                                                            <br>
+                                                            <small class="text-muted">$10/day</small>
+                                                        </label>
+                                                    </div>
+                                                    <i class="fas fa-car text-primary"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Service Card 2 -->
+                                    <div class="col-md-6">
+                                        <div class="card h-100">
+                                            <div class="card-body">
+                                                <div class="form-check d-flex justify-content-between align-items-center">
+                                                    <div>
+                                                        <input class="form-check-input" type="checkbox" name="services[]" value="2">
+                                                        <label class="form-check-label">
+                                                            Extra Bed
+                                                            <br>
+                                                            <small class="text-muted">$15/night</small>
+                                                        </label>
+                                                    </div>
+                                                    <i class="fas fa-bed text-primary"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Service Card 3 -->
+                                    <div class="col-md-6">
+                                        <div class="card h-100">
+                                            <div class="card-body">
+                                                <div class="form-check d-flex justify-content-between align-items-center">
+                                                    <div>
+                                                        <input class="form-check-input" type="checkbox" name="services[]" value="3">
+                                                        <label class="form-check-label">
+                                                            Daily Cleaning
+                                                            <br>
+                                                            <small class="text-muted">$25/day</small>
+                                                        </label>
+                                                    </div>
+                                                    <i class="fas fa-broom text-primary"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Service Card 4 -->
+                                    <div class="col-md-6">
+                                        <div class="card h-100">
+                                            <div class="card-body">
+                                                <div class="form-check d-flex justify-content-between align-items-center">
+                                                    <div>
+                                                        <input class="form-check-input" type="checkbox" name="services[]" value="4">
+                                                        <label class="form-check-label">
+                                                            BBQ Equipment
+                                                            <br>
+                                                            <small class="text-muted">$30/stay</small>
+                                                        </label>
+                                                    </div>
+                                                    <i class="fas fa-fire text-primary"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+            
+                            <!-- Payment Section -->
+                            <div class="payment-section">
+                                <h4 class="mb-3">Payment Method</h4>
+                                
+                                <div class="form-check mb-3">
+                                    <input class="form-check-input" type="radio" name="paymentMethod" id="cashPayment" value="cash" checked>
+                                    <label class="form-check-label" for="cashPayment">
+                                        Cash on Hand
+                                    </label>
+                                </div>
+                                
+                                <div class="form-check mb-3">
+                                    <input class="form-check-input" type="radio" name="paymentMethod" id="gcashPayment" value="gcash">
+                                    <label class="form-check-label" for="gcashPayment">
+                                        GCash
+                                    </label>
+                                </div>
+            
+                                <!-- GCash QR Section -->
+                                <div id="gcashQRSection" class="qr-section">
+                                    <div class="alert alert-info">
+                                        Scan this QR code to pay via GCash
+                                    </div>
+                                    <img src="../assets/images/gcash-qr.png.png" alt="GCash QR Code" class="qr-code" style="width: 200px; height: 210px;">
+                                    <div class="payment-instructions">
+                                        <h5>Payment Instructions:</h5>
+                                        <ol>
+                                            <li>Open your GCash app</li>
+                                            <li>Scan the QR code above</li>
+                                            <li>Enter the exact amount: ₱<span id="gcashAmount">0.00</span></li>
+                                            <li>Complete the payment</li>
+                                            <li>Upload your payment screenshot below</li>
+                                        </ol>
+                                    </div>
+                                    
+                                    <div class="proof-upload mt-3">
+                                        <label for="paymentProof" class="form-label">Upload Payment Screenshot</label>
+                                        <input type="file" class="form-control" id="paymentProof" accept="image/*">
+                                        <img id="proofPreview" class="image-preview">
+                                    </div>
+                                </div>
+                            </div>
+            
+                            <!-- Special Request -->
+                            <div class="mb-4">
+                                <label for="specialRequest" class="form-label">Special Requests</label>
+                                <textarea class="form-control" id="specialRequest" rows="3"></textarea>
+                            </div>
+            
+                            <!-- Total Amount -->
+                            <div class="price-display mb-4">
+                                Total Amount: ₱<span id="totalAmount">0.00</span>
+                            </div>
+            
+                            <button type="submit" class="btn btn-primary btn-lg w-100">Confirm Reservation</button>
+                        </form>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script>
+      // Initialize date pickers
+flatpickr("#checkIn", {
+    enableTime: true,
+    dateFormat: "Y-m-d H:i",
+    minDate: "today"
+});
+
+flatpickr("#checkOut", {
+    enableTime: true,
+    dateFormat: "Y-m-d H:i",
+    minDate: "today"
+});
+
+// Generate reservation number when page loads
+document.addEventListener('DOMContentLoaded', function() {
+    generateReservationNumber();
+});
+
+// Generate unique reservation number
+function generateReservationNumber() {
+    const timestamp = new Date().getTime();
+    const random = Math.floor(Math.random() * 1000).toString().padStart(3, '0');
+    const reservationNumber = `RS${timestamp}${random}`;
+    document.getElementById('reservationNumber').value = reservationNumber;
+}
+
+// Handle payment method change
+document.querySelectorAll('input[name="paymentMethod"]').forEach(radio => {
+    radio.addEventListener('change', function() {
+        const gcashSection = document.getElementById('gcashQRSection');
+        const proofUpload = document.querySelector('.proof-upload');
+        
+        if (this.value === 'gcash') {
+            gcashSection.style.display = 'block';
+            proofUpload.style.display = 'block';
+        } else {
+            gcashSection.style.display = 'none';
+            proofUpload.style.display = 'none';
+        }
+    });
+});
+
+// Handle image preview
+document.getElementById('paymentProof').addEventListener('change', function(e) {
+    const preview = document.getElementById('proofPreview');
+    const file = e.target.files[0];
+    const reader = new FileReader();
+
+    reader.onload = function(e) {
+        preview.src = e.target.result;
+        preview.style.display = 'block';
+    }
+
+    if (file) {
+        reader.readAsDataURL(file);
+    }
+});
+
+// Form submission handler
+document.getElementById('reservationForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    alert('Reservation submitted successfully!');
+});
+       
+    </script>
+</body>
+</html>

@@ -159,7 +159,7 @@
                                 <div class="col-md-6">
                                     <div class="mb-3">
                                         <label for="bookingNumber" class="form-label">Booking Number</label>
-                                        <input type="text" class="form-control" id="bookingNumber" readonly>
+                                        <input type="text" class="form-control" name="bookingNumber" id="bookingNumber" readonly>
                                     </div>
                                 </div>
                             </div>
@@ -169,13 +169,13 @@
                                 <div class="col-md-6">
                                     <div class="mb-3">
                                         <label for="checkIn" class="form-label">Check-in Date & Time</label>
-                                        <input type="text" class="form-control" id="checkIn" required>
+                                        <input type="text" class="form-control" name="checkIn" id="checkIn" required>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="mb-3">
                                         <label for="checkOut" class="form-label">Check-out Date & Time</label>
-                                        <input type="text" class="form-control" id="checkOut" required>
+                                        <input type="text" class="form-control" name="checkOut" id="checkOut" required>
                                     </div>
                                 </div>
                             </div>
@@ -185,34 +185,48 @@
                                 <div class="col-md-6">
                                     <div class="mb-3">
                                         <label for="adult" class="form-label">Number of Adults</label>
-                                        <input type="number" class="form-control" id="adult" min="1" required>
+                                        <input type="number" class="form-control" name="adult" id="adult" min="1" required>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="mb-3">
                                         <label for="kids" class="form-label">Number of Children</label>
-                                        <input type="number" class="form-control" id="kids" min="0">
+                                        <input type="number" class="form-control" name="kids"  id="kids" min="0">
                                     </div>
                                 </div>
                             </div>
             
-                            <!-- Payment Section -->
-                            <div class="payment-section">
-                                <h4 class="mb-3">Payment Method</h4>
-                                
-                                <div class="form-check mb-3">
-                                    <input class="form-check-input" type="radio" name="paymentMethod" id="cashPayment" value="cash" checked>
-                                    <label class="form-check-label" for="cashPayment">
-                                        Cash on Hand
-                                    </label>
+                            <div class="row mt-2 mb-4">
+                                <div class="col-md-6">
+                                    <!-- Payment Section -->
+                                    <div class="payment-section">
+                                        <h5 class="mb-3">Payment Method</h5>
+                                        <div class="form-check mb-3">
+                                            <input class="form-check-input" type="radio" name="paymentMethod" id="cashPayment" value="cash" checked>
+                                            <label class="form-check-label" for="cashPayment">
+                                                Cash on Hand
+                                            </label>
+                                        </div>
+                                        <div class="form-check mb-3">
+                                            <input class="form-check-input" type="radio" name="paymentMethod" id="gcashPayment" value="gcash">
+                                            <label class="form-check-label" for="gcashPayment">
+                                                GCash
+                                            </label>
+                                        </div>
+                                    </div>
                                 </div>
-                                
-                                <div class="form-check mb-3">
-                                    <input class="form-check-input" type="radio" name="paymentMethod" id="gcashPayment" value="gcash">
-                                    <label class="form-check-label" for="gcashPayment">
-                                        GCash
-                                    </label>
+                                <div class="col-md-6">
+                                    <!-- Stay Duration -->
+                                    <div class="form-group">
+                                        <label for="stayDuration" class="form-label">Stay Duration</label>
+                                        <select class="form-select" id="stayDuration" name="stayDuration">
+                                            <option value="">Select Stay Duration</option>
+                                            <option value="day-use">Day Use</option>
+                                            <option value="overnight">Overnight</option>
+                                        </select>
+                                    </div>
                                 </div>
+                            </div>
             
                                 <!-- GCash QR Section -->
                                 <div id="gcashQRSection" class="qr-section">
@@ -233,22 +247,23 @@
                                     
                                     <div class="proof-upload mt-3">
                                         <label for="paymentProof" class="form-label">Upload Payment Screenshot</label>
-                                        <input type="file" class="form-control" id="paymentProof" accept="image/*">
+                                        <input type="file" class="form-control" name="paymentProof" id="paymentProof" accept="image/*">
                                         <img id="proofPreview" class="image-preview">
                                     </div>
                                 </div>
-                            </div>
+                            
             
                             <!-- Special Request -->
                             <div class="mb-4">
                                 <label for="specialRequest" class="form-label">Special Requests</label>
-                                <textarea class="form-control" id="specialRequest" rows="3"></textarea>
+                                <textarea class="form-control" name="specialRequest" id="specialRequest" rows="3"></textarea>
                             </div>
             
                             <!-- Total Amount -->
-                            <div class="price-display mb-4">
-                                Total Amount: ₱<span id="totalAmount">0.00</span>
-                            </div>
+        <div class="form-group mb-4">
+            <label for="totalAmount" class="form-label">Total Amount</label>
+            <input type="text" class="form-control price-display" name="totalAmount" id="totalAmount" value="₱0.00" readonly>
+        </div>
             
                             <button type="submit" class="btn btn-primary btn-lg w-100">Confirm Booking</button>
                         </form>

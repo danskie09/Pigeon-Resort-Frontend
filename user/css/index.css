@@ -104,18 +104,29 @@ body {
     box-shadow: 0 0 0 4px rgba(0, 123, 255, 0.5);
   }
 
-  .btn-book {
+  .btn-secondary {
     background-color: var(--accent-orange); /* Change to your desired color */
     color: whitesmoke;
+   border: none;
+   flex: 1;
    
-    padding: 8px 15px;
-    border-radius: 5px;
     
     
-    transition: background-color 0.3s ease, transform 0.3s ease;
+    
+  }
+
+  .btn-primary {
+    
+   border: none;
+   flex: 1;
+   
+    
+    
+    
   }
   
-  .btn-book:hover {
+  
+  .btn-secondary:hover {
     background-color: var(--light-orange); /* Darker shade for hover effect */
     transform: scale(1.05);
     color: #fff; /* Ensures text remains visible */
@@ -136,6 +147,18 @@ body {
     padding: 70px;
     font-weight: 500;
     z-index: 100;
+  }
+
+  @media (max-width: 767px) {
+    .carousel-caption {
+      padding: 30px;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .carousel-caption {
+      padding: 50px 70px;
+    }
   }
 
  

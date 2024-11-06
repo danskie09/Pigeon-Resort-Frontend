@@ -93,74 +93,73 @@
                             <!-- Basic reservation details -->
                             <div class="row mb-4">
                                 <!-- Replace the existing room selection div in your form -->
-<div class="row mb-4">
-    <div class="col-12">
-        <label class="form-label mb-3">Select Room <span class="text-danger">*</span></label>
-        <div class="row g-4">
-            <!-- Deluxe Room -->
-            <div class="col-md-4">
-                <div class="card room-card h-100">
-                    <input type="radio" class="btn-check" name="roomType" id="room1" value="1" required>
-                    <label class="btn card-body p-0" for="room1">
-                        <img src="../assets/images/room101.webp" class="card-img-top" alt="Deluxe Room" style="height: 200px; object-fit: cover;">
-                        <div class="p-3">
-                            <h5 class="card-title">Deluxe Room</h5>
-                            <ul class="list-unstyled mb-0">
-                                <li><i class="bi bi-people-fill"></i> Max 2 Adults</li>
-                                <li><i class="bi bi-wifi"></i> Free WiFi</li>
-                                <li><i class="bi bi-tv"></i> Smart TV</li>
-                            </ul>
-                        </div>
-                    </label>
-                </div>
-            </div>
-
-            <!-- Superior Room -->
-            <div class="col-md-4">
-                <div class="card room-card h-100">
-                    <input type="radio" class="btn-check" name="roomType" id="room2" value="2" required>
-                    <label class="btn card-body p-0" for="room2">
-                        <img src="../assets/images/room102.webp" class="card-img-top" alt="Superior Room" style="height: 200px; object-fit: cover;">
-                        <div class="p-3">
-                            <h5 class="card-title">Superior Room</h5>
-                            <ul class="list-unstyled mb-0">
-                                <li><i class="bi bi-people-fill"></i> Max 3 Adults</li>
-                                <li><i class="bi bi-wifi"></i> Free WiFi</li>
-                                <li><i class="bi bi-tv"></i> Smart TV</li>
-                            </ul>
-                        </div>
-                    </label>
-                </div>
-            </div>
-
-            <!-- Executive Suite -->
-            <div class="col-md-4">
-                <div class="card room-card h-100">
-                    <input type="radio" class="btn-check" name="roomType" id="room3" value="3" required>
-                    <label class="btn card-body p-0" for="room3">
-                        <img src="../assets/images/room103.webp" class="card-img-top" alt="Executive Suite" style="height: 200px; object-fit: cover;">
-                        <div class="p-3">
-                            <h5 class="card-title">Executive Suite</h5>
-                            <ul class="list-unstyled mb-0">
-                                <li><i class="bi bi-people-fill"></i> Max 4 Adults</li>
-                                <li><i class="bi bi-wifi"></i> Free WiFi</li>
-                                <li><i class="bi bi-tv"></i> Smart TV</li>
-                            </ul>
-                        </div>
-                    </label>
-                </div>
-            </div>
-        </div>
-        <!-- Add invalid feedback for form validation -->
-        <div class="invalid-feedback">
-            Please select a room type.
-        </div>
-    </div>
-</div>
+                                <div class="row mb-4">
+                                    <div class="col-12">
+                                        <label class="form-label mb-3">Select Accommodation <span class="text-danger">*</span></label>
+                                        <div class="row g-4">
+                                            <!-- Cottage -->
+                                            <div class="col-md-4">
+                                                <div class="card room-card h-100">
+                                                    <input type="radio" class="btn-check" name="accommodation" id="cottage" value="cottage" required>
+                                                    <label class="btn card-body p-0" for="cottage">
+                                                        <img src="../assets/images/cottage-reserve.jpg" class="card-img-top" alt="Cottage" style="height: 200px; object-fit: cover;">
+                                                        <div class="p-3">
+                                                            <h5 class="card-title">Cottage</h5>
+                                                            <ul class="list-unstyled mb-0">
+                                                                <li><i class="bi bi-people-fill"></i> Max 4 Adults</li>
+                                                                <li><i class="bi bi-wifi"></i> Free WiFi</li>
+                                                                <li><i class="bi bi-tv"></i> Smart TV</li>
+                                                                <li><i class="bi bi-cup-hot"></i> Kitchenette</li>
+                                                            </ul>
+                                                        </div>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <!-- Gazebo -->
+                                            <div class="col-md-4">
+                                                <div class="card room-card h-100">
+                                                    <input type="radio" class="btn-check" name="accommodation" id="gazebo" value="gazebo" required>
+                                                    <label class="btn card-body p-0" for="gazebo">
+                                                        <img src="../assets/images/gazebo.jpg" class="card-img-top" alt="Gazebo" style="height: 200px; object-fit: cover;">
+                                                        <div class="p-3">
+                                                            <h5 class="card-title">Gazebo</h5>
+                                                            <ul class="list-unstyled mb-0">
+                                                                <li><i class="bi bi-people-fill"></i> Max 2 Adults</li>
+                                                                <li><i class="bi bi-wifi"></i> Free WiFi</li>
+                                                                <li><i class="bi bi-sunset"></i> Scenic View</li>
+                                                            </ul>
+                                                        </div>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <!-- Luxury Villa -->
+                                            <div class="col-md-4">
+                                                <div class="card room-card h-100">
+                                                    <input type="radio" class="btn-check" name="accommodation" id="villa" value="villa" required>
+                                                    <label class="btn card-body p-0" for="villa">
+                                                        <img src="../assets/images/native.jpg" class="card-img-top" alt="Luxury Villa" style="height: 200px; object-fit: cover;">
+                                                        <div class="p-3">
+                                                            <h5 class="card-title">Native</h5>
+                                                            <ul class="list-unstyled mb-0">
+                                                                <li><i class="bi bi-people-fill"></i> Max 6 Adults</li>
+                                                                <li><i class="bi bi-wifi"></i> Free WiFi</li>
+                                                                <li><i class="bi bi-cup-hot"></i> Private Pool</li>
+                                                            </ul>
+                                                        </div>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Add invalid feedback for form validation -->
+                                        <div class="invalid-feedback">
+                                            Please select an accommodation.
+                                        </div>
+                                    </div>
+                                </div>
                                 <div class="col-md-6">
                                     <div class="mb-3">
                                         <label for="reservationNumber" class="form-label">Reservation Number</label>
-                                        <input type="text" class="form-control" id="reservationNumber" readonly>
+                                        <input type="text" class="form-control" name="reservationNumber"  id="reservationNumber" readonly>
                                     </div>
                                 </div>
                             </div>
@@ -170,13 +169,13 @@
                                 <div class="col-md-6">
                                     <div class="mb-3">
                                         <label for="checkIn" class="form-label">Check-in Date & Time</label>
-                                        <input type="text" class="form-control" id="checkIn" required>
+                                        <input type="text" class="form-control" name="checkIn" id="checkIn" required>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="mb-3">
                                         <label for="checkOut" class="form-label">Check-out Date & Time</label>
-                                        <input type="text" class="form-control" id="checkOut" required>
+                                        <input type="text" class="form-control" name="checkOut" id="checkOut" required>
                                     </div>
                                 </div>
                             </div>
@@ -186,13 +185,13 @@
                                 <div class="col-md-6">
                                     <div class="mb-3">
                                         <label for="adult" class="form-label">Number of Adults</label>
-                                        <input type="number" class="form-control" id="adult" min="1" required>
+                                        <input type="number" class="form-control" name="adult" id="adult" min="1" required>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="mb-3">
                                         <label for="kids" class="form-label">Number of Children</label>
-                                        <input type="number" class="form-control" id="kids" min="0">
+                                        <input type="number" class="form-control" name="kids" id="kids" min="0">
                                     </div>
                                 </div>
                             </div>
@@ -210,12 +209,12 @@
                                                     <div>
                                                         <input class="form-check-input" type="checkbox" name="services[]" value="1">
                                                         <label class="form-check-label">
-                                                            Extra Vehicle Parking
+                                                            Karaoke
                                                             <br>
-                                                            <small class="text-muted">$10/day</small>
+                                                            <small class="text-muted">P 500.00</small>
                                                         </label>
                                                     </div>
-                                                    <i class="fas fa-car text-primary"></i>
+                                                    <i class="fa-solid fa-music text-primary"></i>
                                                 </div>
                                             </div>
                                         </div>
@@ -229,75 +228,52 @@
                                                     <div>
                                                         <input class="form-check-input" type="checkbox" name="services[]" value="2">
                                                         <label class="form-check-label">
-                                                            Extra Bed
+                                                            Table and Chairs
                                                             <br>
-                                                            <small class="text-muted">$15/night</small>
+                                                            <small class="text-muted">P 100.00</small>
                                                         </label>
                                                     </div>
-                                                    <i class="fas fa-bed text-primary"></i>
+                                                    <i class="fa-solid fa-chair text-primary"></i>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
 
-                                    <!-- Service Card 3 -->
-                                    <div class="col-md-6">
-                                        <div class="card h-100">
-                                            <div class="card-body">
-                                                <div class="form-check d-flex justify-content-between align-items-center">
-                                                    <div>
-                                                        <input class="form-check-input" type="checkbox" name="services[]" value="3">
-                                                        <label class="form-check-label">
-                                                            Daily Cleaning
-                                                            <br>
-                                                            <small class="text-muted">$25/day</small>
-                                                        </label>
-                                                    </div>
-                                                    <i class="fas fa-broom text-primary"></i>
-                                                </div>
-                                            </div>
+                                    
+                            <div class="row mt-2 mb-4">
+                                <div class="col-md-6">
+                                    <!-- Payment Section -->
+                                    <div class="payment-section">
+                                        <h5 class="mb-3">Payment Method</h5>
+                                        <div class="form-check mb-3">
+                                            <input class="form-check-input" type="radio" name="paymentMethod" id="cashPayment" value="cash" checked>
+                                            <label class="form-check-label" for="cashPayment">
+                                                Cash on Hand
+                                            </label>
+                                        </div>
+                                        <div class="form-check mb-3">
+                                            <input class="form-check-input" type="radio" name="paymentMethod" id="gcashPayment" value="gcash">
+                                            <label class="form-check-label" for="gcashPayment">
+                                                GCash
+                                            </label>
                                         </div>
                                     </div>
-
-                                    <!-- Service Card 4 -->
-                                    <div class="col-md-6">
-                                        <div class="card h-100">
-                                            <div class="card-body">
-                                                <div class="form-check d-flex justify-content-between align-items-center">
-                                                    <div>
-                                                        <input class="form-check-input" type="checkbox" name="services[]" value="4">
-                                                        <label class="form-check-label">
-                                                            BBQ Equipment
-                                                            <br>
-                                                            <small class="text-muted">$30/stay</small>
-                                                        </label>
-                                                    </div>
-                                                    <i class="fas fa-fire text-primary"></i>
-                                                </div>
-                                            </div>
-                                        </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <!-- Stay Duration -->
+                                    <div class="form-group">
+                                        <label for="stayDuration" class="form-label">Stay Duration</label>
+                                        <select class="form-select" id="stayDuration" name="stayDuration">
+                                            <option value="">Select Stay Duration</option>
+                                            <option value="day-use">Day Use</option>
+                                            <option value="overnight">Overnight</option>
+                                        </select>
                                     </div>
                                 </div>
                             </div>
-            
-                            <!-- Payment Section -->
-                            <div class="payment-section">
-                                <h4 class="mb-3">Payment Method</h4>
-                                
-                                <div class="form-check mb-3">
-                                    <input class="form-check-input" type="radio" name="paymentMethod" id="cashPayment" value="cash" checked>
-                                    <label class="form-check-label" for="cashPayment">
-                                        Cash on Hand
-                                    </label>
-                                </div>
-                                
-                                <div class="form-check mb-3">
-                                    <input class="form-check-input" type="radio" name="paymentMethod" id="gcashPayment" value="gcash">
-                                    <label class="form-check-label" for="gcashPayment">
-                                        GCash
-                                    </label>
-                                </div>
-            
+
+                        
+                            
                                 <!-- GCash QR Section -->
                                 <div id="gcashQRSection" class="qr-section">
                                     <div class="alert alert-info">
@@ -317,22 +293,26 @@
                                     
                                     <div class="proof-upload mt-3">
                                         <label for="paymentProof" class="form-label">Upload Payment Screenshot</label>
-                                        <input type="file" class="form-control" id="paymentProof" accept="image/*">
+                                        <input type="file" class="form-control" name="paymentProof" id="paymentProof" accept="image/*">
                                         <img id="proofPreview" class="image-preview">
                                     </div>
                                 </div>
                             </div>
+
+                            </div>
+                            
             
                             <!-- Special Request -->
                             <div class="mb-4">
                                 <label for="specialRequest" class="form-label">Special Requests</label>
-                                <textarea class="form-control" id="specialRequest" rows="3"></textarea>
+                                <textarea class="form-control"    name="specialRequest"  id="specialRequest" rows="3"></textarea>
                             </div>
             
-                            <!-- Total Amount -->
-                            <div class="price-display mb-4">
-                                Total Amount: ₱<span id="totalAmount">0.00</span>
-                            </div>
+                           <!-- Total Amount -->
+        <div class="form-group mb-4">
+            <label for="totalAmount" class="form-label">Total Amount</label>
+            <input type="text" class="form-control price-display" name="totalAmount" id="totalAmount" value="₱0.00" readonly>
+        </div>
             
                             <button type="submit" class="btn btn-primary btn-lg w-100">Confirm Reservation</button>
                         </form>

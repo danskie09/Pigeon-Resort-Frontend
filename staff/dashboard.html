@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pigeon Resort | Staff Dashboard</title>
+    
+    <link rel="icon" href="../assets/images/logo.webp" type="image/webp">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css">
+    <script src="https://kit.fontawesome.com/ae360af17e.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../staff/css/dashboard.css">
+
+
+
+</head>
+
+<body>
+    <div class="wrapper">
+        <aside id="sidebar" class="js-sidebar">
+            <!-- Content For Sidebar -->
+            <div class="h-100">
+                <div class="sidebar-logo d-flex justify-content-center">
+                    <a href="#">
+                        <img src="../assets/images/logo.webp" alt="Logo" style="max-width: 125px; height: 100px;"/>
+                    </a>
+                </div>
+                <ul class="sidebar-nav">
+                    <li class="sidebar-header">
+                        Main
+                    </li>
+                    <li class="sidebar-item">
+                        <a href="../staff/dashboard.html" class="sidebar-link">
+                            <i class="fa-solid fa-gauge-high pe-2"></i>
+                            Dashboard
+                        </a>
+                    </li>
+                    <li class="sidebar-item">
+                        <a href="#" class="sidebar-link collapsed d-flex align-items-center" data-bs-target="#pages" data-bs-toggle="collapse"
+   aria-expanded="false">
+    <i class="fa-solid fa-calendar-check pe-2"></i>
+    Bookings
+    <span class="badge ms-2 notification-badge" style="background-color: orange;">15</span>
+</a>
+
+                        <ul id="pages" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+                            <li class="sidebar-item">
+                                <a href="../staff/staff_bookings.html" class="sidebar-link">New Bookings</a>
+                            </li>
+                            <li class="sidebar-item">
+                                <a href="#" class="sidebar-link">Page 2</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="sidebar-item">
+                        <a href="#" class="sidebar-link collapsed" data-bs-target="#posts" data-bs-toggle="collapse"
+                            aria-expanded="false"><i class="fa-solid fa-calendar-days pe-2"></i>
+                            Reservations
+                        </a>
+                        <ul id="posts" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+                            <li class="sidebar-item">
+                                <a href="#" class="sidebar-link">Post 1</a>
+                            </li>
+                            <li class="sidebar-item">
+                                <a href="#" class="sidebar-link">Post 2</a>
+                            </li>
+                            <li class="sidebar-item">
+                                <a href="#" class="sidebar-link">Post 3</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="sidebar-item">
+                        <a href="#" class="sidebar-link collapsed" data-bs-target="#auth" data-bs-toggle="collapse"
+                            aria-expanded="false"><i class="fa-regular fa-user pe-2"></i>
+                            Auth
+                        </a>
+                        <ul id="auth" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+                            <li class="sidebar-item">
+                                <a href="#" class="sidebar-link">Login</a>
+                            </li>
+                            <li class="sidebar-item">
+                                <a href="#" class="sidebar-link">Register</a>
+                            </li>
+                            <li class="sidebar-item">
+                                <a href="#" class="sidebar-link">Forgot Password</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="sidebar-header">
+                        Multi Level Menu
+                    </li>
+                    <li class="sidebar-item">
+                        <a href="#" class="sidebar-link collapsed" data-bs-target="#multi" data-bs-toggle="collapse"
+                            aria-expanded="false"><i class="fa-solid fa-share-nodes pe-2"></i>
+                            Multi Dropdown
+                        </a>
+                        <ul id="multi" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+                            <li class="sidebar-item">
+                                <a href="#" class="sidebar-link collapsed" data-bs-target="#level-1"
+                                    data-bs-toggle="collapse" aria-expanded="false">Level 1</a>
+                                <ul id="level-1" class="sidebar-dropdown list-unstyled collapse">
+                                    <li class="sidebar-item">
+                                        <a href="#" class="sidebar-link">Level 1.1</a>
+                                    </li>
+                                    <li class="sidebar-item">
+                                        <a href="#" class="sidebar-link">Level 1.2</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </aside>
+        <div class="main">
+            <nav class="navbar navbar-expand px-3 border-bottom">
+                <button class="btn" id="sidebar-toggle" type="button">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse navbar">
+                    <ul class="navbar-nav">
+                        <li class="nav-item dropdown">
+                            <a href="#" data-bs-toggle="dropdown" class="nav-icon pe-md-0">
+                                <img src="../staff/images/user.png" class="avatar img-fluid rounded" alt="">
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-end">
+                                
+                                <a href="#" class="dropdown-item">Logout</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <main class="content px-3 py-2">
+                <div class="container-fluid">
+
+                    <!-- content starts here -->
+
+                    <!-- Welcome Banner -->
+        <div class="row mb-4">
+            <div class="col-12">
+                <h4>Welcome back, Daniel! 👋</h4>
+                <p class="text-muted">Here's what's happening at the resort today.</p>
+            </div>
+        </div>
+
+        <!-- Quick Stats Cards -->
+        <div class="row g-3 mb-4">
+            <div class="col-12 col-sm-6 col-xl-3">
+                <div class="card stat-card border-0 shadow-sm">
+                    <div class="card-body">
+                        <div class="d-flex align-items-center">
+                            <div class="flex-grow-1">
+                                <h6 class="text-muted mb-2">Today's Check-ins</h6>
+                                <h4 class="mb-0">12</h4>
+                                <small class="text-success">
+                                    <i class="bi bi-arrow-up"></i> +3 from yesterday
+                                </small>
+                            </div>
+                            <div class="p-2 bg-primary bg-opacity-10 rounded">
+                                <i class="bi bi-box-arrow-in-right text-primary fs-4"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-xl-3">
+                <div class="card stat-card border-0 shadow-sm">
+                    <div class="card-body">
+                        <div class="d-flex align-items-center">
+                            <div class="flex-grow-1">
+                                <h6 class="text-muted mb-2">Available Rooms</h6>
+                                <h4 class="mb-0">24</h4>
+                                <small class="text-danger">
+                                    <i class="bi bi-arrow-down"></i> 75% Occupancy
+                                </small>
+                            </div>
+                            <div class="p-2 bg-success bg-opacity-10 rounded">
+                                <i class="bi bi-door-open text-success fs-4"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-xl-3">
+                <div class="card stat-card border-0 shadow-sm">
+                    <div class="card-body">
+                        <div class="d-flex align-items-center">
+                            <div class="flex-grow-1">
+                                <h6 class="text-muted mb-2">Revenue (Today)</h6>
+                                <h4 class="mb-0">$4,250</h4>
+                                <small class="text-success">
+                                    <i class="bi bi-arrow-up"></i> +15% vs last week
+                                </small>
+                            </div>
+                            <div class="p-2 bg-warning bg-opacity-10 rounded">
+                                <i class="bi bi-currency-dollar text-warning fs-4"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-xl-3">
+                <div class="card stat-card border-0 shadow-sm">
+                    <div class="card-body">
+                        <div class="d-flex align-items-center">
+                            <div class="flex-grow-1">
+                                <h6 class="text-muted mb-2">Active Bookings</h6>
+                                <h4 class="mb-0">156</h4>
+                                <small class="text-success">
+                                    <i class="bi bi-arrow-up"></i> Next 30 days
+                                </small>
+                            </div>
+                            <div class="p-2 bg-info bg-opacity-10 rounded">
+                                <i class="bi bi-calendar-check text-info fs-4"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Calendar and Occupancy Charts Row -->
+        <div class="row g-3 mb-4">
+            <div class="col-12 col-xl-8">
+                <div class="card border-0 shadow-sm">
+                    <div class="card-header bg-transparent border-0">
+                        <div class="d-flex align-items-center justify-content-between">
+                            <h5 class="mb-0">Bookings Calendar</h5>
+                            <div class="d-flex align-items-center gap-2">
+                                <div class="d-flex align-items-center me-3">
+                                    <span class="event-dot bg-primary me-1"></span>
+                                    <small>Check-in</small>
+                                </div>
+                                <div class="d-flex align-items-center me-3">
+                                    <span class="event-dot bg-danger me-1"></span>
+                                    <small>Check-out</small>
+                                </div>
+                                <div class="d-flex align-items-center me-3">
+                                    <span class="event-dot bg-warning me-1"></span>
+                                    <small>Maintenance</small>
+                                </div>
+                                <div class="btn-group btn-group-sm">
+                                    <button class="btn btn-outline-secondary">
+                                        <i class="bi bi-chevron-left"></i>
+                                    </button>
+                                    <button class="btn btn-outline-secondary">March 2024</button>
+                                    <button class="btn btn-outline-secondary">
+                                        <i class="bi bi-chevron-right"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="calendar-grid mb-2">
+                            <div class="calendar-header">Sun</div>
+                            <div class="calendar-header">Mon</div>
+                            <div class="calendar-header">Tue</div>
+                            <div class="calendar-header">Wed</div>
+                            <div class="calendar-header">Thu</div>
+                            <div class="calendar-header">Fri</div>
+                            <div class="calendar-header">Sat</div>
+                        </div>
+                        <div class="calendar-grid">
+                            <div class="calendar-day text-muted">25</div>
+                            <div class="calendar-day text-muted">26</div>
+                            <div class="calendar-day text-muted">27</div>
+                            <div class="calendar-day text-muted">28</div>
+                            <div class="calendar-day">1
+                                <div>
+                                    <span class="event-dot bg-primary"></span>
+                                    <span class="event-dot bg-danger"></span>
+                                </div>
+                            </div>
+                            <div class="calendar-day">2</div>
+                            <div class="calendar-day">3</div>
+                            <div class="calendar-day">4</div>
+                            <div class="calendar-day">5
+                                <div>
+                                    <span class="event-dot bg-warning"></span>
+                                </div>
+                            </div>
+                            <div class="calendar-day">6</div>
+                            <div class="calendar-day today">7
+                                <div>
+                                    <span class="event-dot bg-primary"></span>
+                                    <span class="event-dot bg-primary"></span>
+                                </div>
+                            </div>
+                            <div class="calendar-day">8</div>
+                            <div class="calendar-day">9</div>
+                            <div class="calendar-day">10</div>
+                            <!-- Continue with remaining days... -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-xl-4">
+                <div class="card border-0 shadow-sm">
+                    <div class="card-header bg-transparent border-0">
+                        <h5 class="mb-0">Room Occupancy</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="chart-container">
+                            <img src="/api/placeholder/400/300" alt="Occupancy Chart" class="img-fluid w-100">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Recent Activities and Tasks -->
+        <div class="row g-3">
+            <div class="col-12 col-xl-6">
+                <div class="card border-0 shadow-sm">
+                    <div class="card-header bg-transparent border-0 d-flex justify-content-between align-items-center">
+                        <h5 class="mb-0">Recent Bookings</h5>
+                        <button class="btn btn-sm btn-primary">View All</button>
+                    </div>
+                    <div class="card-body">
+                        <div class="list-group list-group-flush">
+                            <div class="list-group-item">
+                                <div class="d-flex align-items-center">
+                                    <img src="/api/placeholder/40/40" class="rounded-circle me-3" alt="Guest">
+                                    <div class="flex-grow-1">
+                                        <h6 class="mb-0">John Smith</h6>
+                                        <small class="text-muted">Room 301 • Check-in Today</small>
+                                    </div>
+                                    <span class="badge bg-success">Confirmed</span>
+                                </div>
+                            </div>
+                            <div class="list-group-item">
+                                <div class="d-flex align-items-center">
+                                    <img src="/api/placeholder/40/40" class="rounded-circle me-3" alt="Guest">
+                                    <div class="flex-grow-1">
+                                        <h6 class="mb-0">Sarah Johnson</h6>
+                                        <small class="text-muted">Room 205 • Check-in Tomorrow</small>
+                                    </div>
+                                    <span class="badge bg-warning">Pending</span>
+                                </div>
+                            </div>
+                            <div class="list-group-item">
+                                <div class="d-flex align-items-center">
+                                    <img src="/api/placeholder/40/40" class="rounded-circle me-3" alt="Guest">
+                                    <div class="flex-grow-1">
+                                        <h6 class="mb-0">Michael Brown</h6>
+                                        <small class="text-muted">Room 402 • Checked-in</small>
+                                    </div>
+                                    <span class="badge bg-info">In-Stay</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-xl-6">
+                <div class="card border-0 shadow-sm">
+                    <div class="card-header bg-transparent border-0 d-flex justify-content-between align-items-center">
+                        <h5 class="mb-0">Housekeeping Status</h5>
+                        <button class="btn btn-sm btn-primary">View All</button>
+                    </div>
+                    <div class="card-body">
+                        <div class="list-group list-group-flush">
+                            <div class="list-group-item">
+                                <div class="d-flex align-items-center">
+                                    <div class="p-2 bg-warning bg-opacity-10 rounded me-3">
+                                        <i class="bi bi-house-door text-warning"></i>
+                                    </div>
+                                    <div class="flex-grow-1">
+                                        <h6 class="mb-0">Room 205 Cleaning</h6>
+                                        <small class="text-muted">Scheduled for 2:00 PM</small>
+                                    </div>
+                                    <span class="badge bg-warning">Pending</span>
+                                </div>
+                            </div>
+                            <div class="list-group-item">
+                                <div class="d-flex align-items-center">
+                                    <div class="p-2 bg-success bg-opacity-10 rounded me-3">
+                                        <i class="bi bi-check2-circle text-success"></i>
+                                    </div>
+                                    <div class="flex-grow-1">
+                                        <h6 class="mb-0">Room 301 Inspection</h6>
+                                        <small class="text-muted">Completed at 1:30 PM</small>
+                                    </div>
+                                    <span class="badge bg-success">Done</span>
+                                </div>
+                            </div>
+                            <div class="list-group-item">
+                                <div class="d-flex align-items-center">
+                                    <div class="p-2 bg-info bg-opacity-10 rounded me-3">
+                                        <i class="bi bi-tools text-info"></i>
+                                    </div>
+                                    <div class="flex-grow-1">
+                                        <h6 class="mb-0">Room 402 Maintenance</h6>
+                                        <small class="text-muted">In Progress</small>
+                                    </div>
+                                    <span class="badge bg-info">In Progress</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+                    
+
+        <!-- content ends here -->
+                    </div>
+            </main>
+            
+            
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+    const sidebarToggle = document.querySelector("#sidebar-toggle");
+sidebarToggle.addEventListener("click",function(){
+    document.querySelector("#sidebar").classList.toggle("collapsed");
+});
+    </script>
+</body>
+
+</html>

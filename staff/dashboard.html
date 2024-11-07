@@ -11,6 +11,10 @@
     <link rel="icon" href="../assets/images/logo.webp" type="image/webp">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css">
     <script src="https://kit.fontawesome.com/ae360af17e.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.css" rel="stylesheet" />
+
+
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="../staff/css/dashboard.css">
 
@@ -25,7 +29,7 @@
             <div class="h-100">
                 <div class="sidebar-logo d-flex justify-content-center">
                     <a href="#">
-                        <img src="../assets/images/logo.webp" alt="Logo" style="max-width: 125px; height: 100px;"/>
+                        <img src="../assets/images/logo.webp" alt="Logo" style="max-width: 200px; height: 100px;"/>
                     </a>
                 </div>
                 <ul class="sidebar-nav">
@@ -58,7 +62,7 @@
                     <li class="sidebar-item">
                         <a href="#" class="sidebar-link collapsed" data-bs-target="#posts" data-bs-toggle="collapse"
                             aria-expanded="false"><i class="fa-solid fa-calendar-days pe-2"></i>
-                            Reservations
+                            Reservations  <span class="badge ms-2 notification-badge" style="background-color: orange;">6</span>
                         </a>
                         <ul id="posts" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
                             <li class="sidebar-item">
@@ -223,189 +227,126 @@
             </div>
         </div>
 
-        <!-- Calendar and Occupancy Charts Row -->
-        <div class="row g-3 mb-4">
-            <div class="col-12 col-xl-8">
-                <div class="card border-0 shadow-sm">
-                    <div class="card-header bg-transparent border-0">
-                        <div class="d-flex align-items-center justify-content-between">
-                            <h5 class="mb-0">Bookings Calendar</h5>
-                            <div class="d-flex align-items-center gap-2">
-                                <div class="d-flex align-items-center me-3">
-                                    <span class="event-dot bg-primary me-1"></span>
-                                    <small>Check-in</small>
-                                </div>
-                                <div class="d-flex align-items-center me-3">
-                                    <span class="event-dot bg-danger me-1"></span>
-                                    <small>Check-out</small>
-                                </div>
-                                <div class="d-flex align-items-center me-3">
-                                    <span class="event-dot bg-warning me-1"></span>
-                                    <small>Maintenance</small>
-                                </div>
-                                <div class="btn-group btn-group-sm">
-                                    <button class="btn btn-outline-secondary">
-                                        <i class="bi bi-chevron-left"></i>
-                                    </button>
-                                    <button class="btn btn-outline-secondary">March 2024</button>
-                                    <button class="btn btn-outline-secondary">
-                                        <i class="bi bi-chevron-right"></i>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card-body">
-                        <div class="calendar-grid mb-2">
-                            <div class="calendar-header">Sun</div>
-                            <div class="calendar-header">Mon</div>
-                            <div class="calendar-header">Tue</div>
-                            <div class="calendar-header">Wed</div>
-                            <div class="calendar-header">Thu</div>
-                            <div class="calendar-header">Fri</div>
-                            <div class="calendar-header">Sat</div>
-                        </div>
-                        <div class="calendar-grid">
-                            <div class="calendar-day text-muted">25</div>
-                            <div class="calendar-day text-muted">26</div>
-                            <div class="calendar-day text-muted">27</div>
-                            <div class="calendar-day text-muted">28</div>
-                            <div class="calendar-day">1
-                                <div>
-                                    <span class="event-dot bg-primary"></span>
-                                    <span class="event-dot bg-danger"></span>
-                                </div>
-                            </div>
-                            <div class="calendar-day">2</div>
-                            <div class="calendar-day">3</div>
-                            <div class="calendar-day">4</div>
-                            <div class="calendar-day">5
-                                <div>
-                                    <span class="event-dot bg-warning"></span>
-                                </div>
-                            </div>
-                            <div class="calendar-day">6</div>
-                            <div class="calendar-day today">7
-                                <div>
-                                    <span class="event-dot bg-primary"></span>
-                                    <span class="event-dot bg-primary"></span>
-                                </div>
-                            </div>
-                            <div class="calendar-day">8</div>
-                            <div class="calendar-day">9</div>
-                            <div class="calendar-day">10</div>
-                            <!-- Continue with remaining days... -->
-                        </div>
-                    </div>
-                </div>
+       <!-- Calendar and Occupancy Charts Row -->
+  <div class="row g-3 mb-4">
+    <div class="col-12 col-xl-8">
+      <div class="card border-0 shadow-sm">
+        <div class="card-header bg-transparent border-0">
+          <div class="d-flex align-items-center justify-content-between">
+            <h5 class="mb-0">Bookings & Reservations Calendar</h5>
+            <div class="d-flex align-items-center gap-2">
+              
+              <!-- Add any other controls or buttons here -->
             </div>
-            <div class="col-12 col-xl-4">
-                <div class="card border-0 shadow-sm">
-                    <div class="card-header bg-transparent border-0">
-                        <h5 class="mb-0">Room Occupancy</h5>
+          </div>
+        </div>
+        <div class="card-body">
+          <div id="calendar"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- calendar end -->
+    <div class="col-12 col-xl-4">
+        <div class="card border-0 shadow-sm">
+            <div class="card-header bg-transparent border-0 d-flex justify-content-between align-items-center">
+                <h5 class="mb-0">Housekeeping Status</h5>
+                <button class="btn btn-sm btn-primary">View All</button>
+            </div>
+            <div class="card-body">
+                <div class="list-group list-group-flush">
+                    <div class="list-group-item">
+                        <div class="d-flex align-items-center">
+                            <div class="p-2 bg-warning bg-opacity-10 rounded me-3">
+                                <i class="bi bi-house-door text-warning"></i>
+                            </div>
+                            <div class="flex-grow-1">
+                                <h6 class="mb-0">Room 205 Cleaning</h6>
+                                <small class="text-muted">Scheduled for 2:00 PM</small>
+                            </div>
+                            <span class="badge bg-warning">Pending</span>
+                        </div>
                     </div>
-                    <div class="card-body">
-                        <div class="chart-container">
-                            <img src="/api/placeholder/400/300" alt="Occupancy Chart" class="img-fluid w-100">
+                    <div class="list-group-item">
+                        <div class="d-flex align-items-center">
+                            <div class="p-2 bg-success bg-opacity-10 rounded me-3">
+                                <i class="bi bi-check2-circle text-success"></i>
+                            </div>
+                            <div class="flex-grow-1">
+                                <h6 class="mb-0">Room 301 Inspection</h6>
+                                <small class="text-muted">Completed at 1:30 PM</small>
+                            </div>
+                            <span class="badge bg-success">Done</span>
+                        </div>
+                    </div>
+                    <div class="list-group-item">
+                        <div class="d-flex align-items-center">
+                            <div class="p-2 bg-info bg-opacity-10 rounded me-3">
+                                <i class="bi bi-tools text-info"></i>
+                            </div>
+                            <div class="flex-grow-1">
+                                <h6 class="mb-0">Room 402 Maintenance</h6>
+                                <small class="text-muted">In Progress</small>
+                            </div>
+                            <span class="badge bg-info">In Progress</span>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- Recent Activities and Tasks -->
-        <div class="row g-3">
-            <div class="col-12 col-xl-6">
-                <div class="card border-0 shadow-sm">
-                    <div class="card-header bg-transparent border-0 d-flex justify-content-between align-items-center">
-                        <h5 class="mb-0">Recent Bookings</h5>
-                        <button class="btn btn-sm btn-primary">View All</button>
-                    </div>
-                    <div class="card-body">
-                        <div class="list-group list-group-flush">
-                            <div class="list-group-item">
-                                <div class="d-flex align-items-center">
-                                    <img src="/api/placeholder/40/40" class="rounded-circle me-3" alt="Guest">
-                                    <div class="flex-grow-1">
-                                        <h6 class="mb-0">John Smith</h6>
-                                        <small class="text-muted">Room 301 • Check-in Today</small>
-                                    </div>
-                                    <span class="badge bg-success">Confirmed</span>
-                                </div>
+
+
+        <div class="card border-0 shadow-sm">
+            <div class="card-header bg-transparent border-0 d-flex justify-content-between align-items-center">
+                <h5 class="mb-0">Recent Bookings</h5>
+                <button class="btn btn-sm btn-primary">View All</button>
+            </div>
+            <div class="card-body">
+                <div class="list-group list-group-flush">
+                    <div class="list-group-item">
+                        <div class="d-flex align-items-center">
+                            <img src="/api/placeholder/40/40" class="rounded-circle me-3" alt="Guest">
+                            <div class="flex-grow-1">
+                                <h6 class="mb-0">John Smith</h6>
+                                <small class="text-muted">Room 301 • Check-in Today</small>
                             </div>
-                            <div class="list-group-item">
-                                <div class="d-flex align-items-center">
-                                    <img src="/api/placeholder/40/40" class="rounded-circle me-3" alt="Guest">
-                                    <div class="flex-grow-1">
-                                        <h6 class="mb-0">Sarah Johnson</h6>
-                                        <small class="text-muted">Room 205 • Check-in Tomorrow</small>
-                                    </div>
-                                    <span class="badge bg-warning">Pending</span>
-                                </div>
-                            </div>
-                            <div class="list-group-item">
-                                <div class="d-flex align-items-center">
-                                    <img src="/api/placeholder/40/40" class="rounded-circle me-3" alt="Guest">
-                                    <div class="flex-grow-1">
-                                        <h6 class="mb-0">Michael Brown</h6>
-                                        <small class="text-muted">Room 402 • Checked-in</small>
-                                    </div>
-                                    <span class="badge bg-info">In-Stay</span>
-                                </div>
-                            </div>
+                            <span class="badge bg-success">Confirmed</span>
                         </div>
                     </div>
-                </div>
-            </div>
-            <div class="col-12 col-xl-6">
-                <div class="card border-0 shadow-sm">
-                    <div class="card-header bg-transparent border-0 d-flex justify-content-between align-items-center">
-                        <h5 class="mb-0">Housekeeping Status</h5>
-                        <button class="btn btn-sm btn-primary">View All</button>
+                    <div class="list-group-item">
+                        <div class="d-flex align-items-center">
+                            <img src="/api/placeholder/40/40" class="rounded-circle me-3" alt="Guest">
+                            <div class="flex-grow-1">
+                                <h6 class="mb-0">Sarah Johnson</h6>
+                                <small class="text-muted">Room 205 • Check-in Tomorrow</small>
+                            </div>
+                            <span class="badge bg-warning">Pending</span>
+                        </div>
                     </div>
-                    <div class="card-body">
-                        <div class="list-group list-group-flush">
-                            <div class="list-group-item">
-                                <div class="d-flex align-items-center">
-                                    <div class="p-2 bg-warning bg-opacity-10 rounded me-3">
-                                        <i class="bi bi-house-door text-warning"></i>
-                                    </div>
-                                    <div class="flex-grow-1">
-                                        <h6 class="mb-0">Room 205 Cleaning</h6>
-                                        <small class="text-muted">Scheduled for 2:00 PM</small>
-                                    </div>
-                                    <span class="badge bg-warning">Pending</span>
-                                </div>
+                    <div class="list-group-item">
+                        <div class="d-flex align-items-center">
+                            <img src="/api/placeholder/40/40" class="rounded-circle me-3" alt="Guest">
+                            <div class="flex-grow-1">
+                                <h6 class="mb-0">Michael Brown</h6>
+                                <small class="text-muted">Room 402 • Checked-in</small>
                             </div>
-                            <div class="list-group-item">
-                                <div class="d-flex align-items-center">
-                                    <div class="p-2 bg-success bg-opacity-10 rounded me-3">
-                                        <i class="bi bi-check2-circle text-success"></i>
-                                    </div>
-                                    <div class="flex-grow-1">
-                                        <h6 class="mb-0">Room 301 Inspection</h6>
-                                        <small class="text-muted">Completed at 1:30 PM</small>
-                                    </div>
-                                    <span class="badge bg-success">Done</span>
-                                </div>
-                            </div>
-                            <div class="list-group-item">
-                                <div class="d-flex align-items-center">
-                                    <div class="p-2 bg-info bg-opacity-10 rounded me-3">
-                                        <i class="bi bi-tools text-info"></i>
-                                    </div>
-                                    <div class="flex-grow-1">
-                                        <h6 class="mb-0">Room 402 Maintenance</h6>
-                                        <small class="text-muted">In Progress</small>
-                                    </div>
-                                    <span class="badge bg-info">In Progress</span>
-                                </div>
-                            </div>
+                            <span class="badge bg-info">In-Stay</span>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+
+
+
+
+
+
+    </div>
+  </div>
+
+        
                     
 
         <!-- content ends here -->
@@ -416,12 +357,27 @@
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.js"></script>
     <script>
+
+document.addEventListener('DOMContentLoaded', function() {
+  var calendarEl = document.getElementById('calendar');
+  var calendar = new FullCalendar.Calendar(calendarEl, {
+    initialView: 'dayGridMonth',
+   
+  });
+  calendar.render();
+});
+
+
+
     const sidebarToggle = document.querySelector("#sidebar-toggle");
 sidebarToggle.addEventListener("click",function(){
     document.querySelector("#sidebar").classList.toggle("collapsed");
 });
-    </script>
+
+
+</script>
 </body>
 
 </html>

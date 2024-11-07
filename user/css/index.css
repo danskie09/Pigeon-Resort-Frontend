@@ -104,7 +104,7 @@ body {
     box-shadow: 0 0 0 4px rgba(0, 123, 255, 0.5);
   }
 
-  .btn-secondary {
+  .btn-secondary1 {
     background-color: var(--accent-orange); /* Change to your desired color */
     color: whitesmoke;
    border: none;
@@ -115,7 +115,7 @@ body {
     
   }
 
-  .btn-primary {
+  .btn-primary1 {
     
    border: none;
    flex: 1;
@@ -126,7 +126,7 @@ body {
   }
   
   
-  .btn-secondary:hover {
+  .btn-secondary1:hover {
     background-color: var(--light-orange); /* Darker shade for hover effect */
     transform: scale(1.05);
     color: #fff; /* Ensures text remains visible */

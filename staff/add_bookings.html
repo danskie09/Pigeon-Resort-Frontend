@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pigeon Resort | Add Booking</title>
+    
+    <link rel="icon" href="../assets/images/logo.webp" type="image/webp">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css">
+    <script src="https://kit.fontawesome.com/ae360af17e.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../staff/css/add_bookings.css">
+
+
+    <!-- from booking css -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="../staff/css/add_booking.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <aside id="sidebar" class="js-sidebar">
+            <!-- Content For Sidebar -->
+            <div class="h-100">
+                <div class="sidebar-logo d-flex justify-content-center">
+                    <a href="#">
+                        <img src="../assets/images/logo.webp" alt="Logo" style="max-width: 200px; height: 100px;"/>
+                    </a>
+                </div>
+                <ul class="sidebar-nav">
+                    <li class="sidebar-header">
+                        Main
+                    </li>
+                    <li class="sidebar-item">
+                        <a href="../staff/dashboard.html" class="sidebar-link">
+                            <i class="fa-solid fa-gauge-high pe-2"></i>
+                            Dashboard
+                        </a>
+                    </li>
+                    <li class="sidebar-item">
+                        <a href="#" class="sidebar-link collapsed d-flex align-items-center" data-bs-target="#pages" data-bs-toggle="collapse"
+   aria-expanded="false">
+    <i class="fa-solid fa-calendar-check pe-2"></i>
+    Bookings
+    <span class="badge ms-2 notification-badge" style="background-color: orange;">15</span>
+</a>
+
+                        <ul id="pages" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+                            <li class="sidebar-item">
+                                <a href="../staff/staff_bookings.html" class="sidebar-link">New Bookings</a>
+                            </li>
+                            <li class="sidebar-item">
+                                <a href="../staff/add_bookings.html" class="sidebar-link">Add Booking</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="sidebar-item">
+                        <a href="#" class="sidebar-link collapsed" data-bs-target="#posts" data-bs-toggle="collapse"
+                            aria-expanded="false"><i class="fa-solid fa-calendar-days pe-2"></i>
+                            Reservations
+                        </a>
+                        <ul id="posts" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+                            <li class="sidebar-item">
+                                <a href="../staff/staff_reservations.html" class="sidebar-link">New Reservations</a>
+                            </li>
+                            <li class="sidebar-item">
+                                <a href="#" class="sidebar-link">Add Reservation</a>
+                            </li>
+                           
+                        </ul>
+                    </li>
+                    <li class="sidebar-item">
+                        <a href="#" class="sidebar-link collapsed" data-bs-target="#auth" data-bs-toggle="collapse"
+                            aria-expanded="false"><i class="fa-regular fa-user pe-2"></i>
+                            Auth
+                        </a>
+                        <ul id="auth" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+                            <li class="sidebar-item">
+                                <a href="#" class="sidebar-link">Login</a>
+                            </li>
+                            <li class="sidebar-item">
+                                <a href="#" class="sidebar-link">Register</a>
+                            </li>
+                            <li class="sidebar-item">
+                                <a href="#" class="sidebar-link">Forgot Password</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="sidebar-header">
+                        Multi Level Menu
+                    </li>
+                    <li class="sidebar-item">
+                        <a href="#" class="sidebar-link collapsed" data-bs-target="#multi" data-bs-toggle="collapse"
+                            aria-expanded="false"><i class="fa-solid fa-share-nodes pe-2"></i>
+                            Multi Dropdown
+                        </a>
+                        <ul id="multi" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+                            <li class="sidebar-item">
+                                <a href="#" class="sidebar-link collapsed" data-bs-target="#level-1"
+                                    data-bs-toggle="collapse" aria-expanded="false">Level 1</a>
+                                <ul id="level-1" class="sidebar-dropdown list-unstyled collapse">
+                                    <li class="sidebar-item">
+                                        <a href="#" class="sidebar-link">Level 1.1</a>
+                                    </li>
+                                    <li class="sidebar-item">
+                                        <a href="#" class="sidebar-link">Level 1.2</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </aside>
+        <div class="main">
+            <nav class="navbar navbar-expand px-3 border-bottom">
+                <button class="btn" id="sidebar-toggle" type="button">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse navbar">
+                    <ul class="navbar-nav">
+                        <li class="nav-item dropdown">
+                            <a href="#" data-bs-toggle="dropdown" class="nav-icon pe-md-0">
+                                <img src="../staff/images/user.png" class="avatar img-fluid rounded" alt="">
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-end">
+                                
+                                <a href="#" class="dropdown-item">Logout</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <main class="content px-3 py-2">
+                <div class="container-fluid">
+                    
+                    <!-- content goes here -->
+                    <div class="container py-5">
+                        <div class="row justify-content-center">
+                            <div class="col-md-8">
+                                <div class="card shadow">
+                                    <!-- Header with background and thumbnails -->
+                                    <div class="booking-header">
+                                        <div class="header-background">
+                                            <img src="../assets/images/pigeon-bg.webp" alt="Beautiful beach background">
+                                        </div>
+                                        <div class="image-thumbnails">
+                                            <div class="thumbnail">
+                                                <img src="../assets/images/gallery01.webp" alt="Hotel room 1">
+                                            </div>
+                                            <div class="thumbnail">
+                                                <img src="../assets/images/carousel2.webp" alt="Hotel room 2">
+                                            </div>
+                                            <div class="thumbnail">
+                                                <img src="../assets/images/gallery02.webp" alt="Hotel facilities">
+                                            </div>
+                                        </div>
+                                    </div>
+                
+                                    <div class="card-body p-4">
+                                        <h2 class="text-center mb-4">Room Booking</h2>
+                                        <p class="text-center text-muted mb-4">Experience something new every moment</p>
+                
+                                        <form id="bookingForm">
+                                            <!-- Basic booking details -->
+                                            <div class="row mb-4">
+                                            <div class="col-md-6">
+                                                <div class="mb-3">
+                                                    <label for="firstname" class="form-label">First Name</label>
+                                                    <input type="text" class="form-control" name="firstname" id="firstname">
+                                                </div>
+                                            </div>
+
+
+                                            <div class="col-md-6">
+                                                <div class="mb-3">
+                                                    <label for="lastname" class="form-label">Last Name</label>
+                                                    <input type="text" class="form-control" name="lastname" id="lastname">
+                                                </div>
+                                            </div>
+
+                                            </div>
+
+
+                                            <div class="row mb-4">
+                                                <div class="col-md-6">
+                                                    <div class="mb-3">
+                                                        <label for="email" class="form-label">Email</label>
+                                                        <input type="email" class="form-control" name="email" id="email">
+                                                    </div>
+                                                </div>
+    
+    
+                                                <div class="col-md-6">
+                                                    <div class="mb-3">
+                                                        <label for="nationality" class="form-label">Nationality</label>
+                                                        <input type="text" class="form-control" name="nationality" id="nationality">
+                                                    </div>
+                                                </div>
+    
+                                                </div>
+                                                <div class="row mb-4">
+                                            
+                                                <!-- Replace the existing room selection div in your form -->
+                <div class="row mb-4">
+                    <div class="col-12">
+                        <label class="form-label mb-3">Select Room <span class="text-danger">*</span></label>
+                        <div class="row g-4">
+                            <!-- Deluxe Room -->
+                            <div class="col-md-4">
+                                <div class="card room-card h-100">
+                                    <input type="radio" class="btn-check" name="roomType" id="room1" value="1" required>
+                                    <label class="btn card-body p-0" for="room1">
+                                        <img src="../assets/images/room101.webp" class="card-img-top" alt="Deluxe Room" style="height: 200px; object-fit: cover;">
+                                        <div class="p-3">
+                                            <h5 class="card-title">Deluxe Room</h5>
+                                            <ul class="list-unstyled mb-0">
+                                                <li><i class="bi bi-people-fill"></i> Max 2 Adults</li>
+                                                <li><i class="bi bi-wifi"></i> Free WiFi</li>
+                                                <li><i class="bi bi-tv"></i> Smart TV</li>
+                                            </ul>
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
+                
+                            <!-- Superior Room -->
+                            <div class="col-md-4">
+                                <div class="card room-card h-100">
+                                    <input type="radio" class="btn-check" name="roomType" id="room2" value="2" required>
+                                    <label class="btn card-body p-0" for="room2">
+                                        <img src="../assets/images/room102.webp" class="card-img-top" alt="Superior Room" style="height: 200px; object-fit: cover;">
+                                        <div class="p-3">
+                                            <h5 class="card-title">Superior Room</h5>
+                                            <ul class="list-unstyled mb-0">
+                                                <li><i class="bi bi-people-fill"></i> Max 3 Adults</li>
+                                                <li><i class="bi bi-wifi"></i> Free WiFi</li>
+                                                <li><i class="bi bi-tv"></i> Smart TV</li>
+                                            </ul>
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
+
+
+                
+                            <!-- Executive Suite -->
+                            <div class="col-md-4">
+                                <div class="card room-card h-100">
+                                    <input type="radio" class="btn-check" name="roomType" id="room3" value="3" required>
+                                    <label class="btn card-body p-0" for="room3">
+                                        <img src="../assets/images/room103.webp" class="card-img-top" alt="Executive Suite" style="height: 200px; object-fit: cover;">
+                                        <div class="p-3">
+                                            <h5 class="card-title">Executive Suite</h5>
+                                            <ul class="list-unstyled mb-0">
+                                                <li><i class="bi bi-people-fill"></i> Max 4 Adults</li>
+                                                <li><i class="bi bi-wifi"></i> Free WiFi</li>
+                                                <li><i class="bi bi-tv"></i> Smart TV</li>
+                                            </ul>
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Add invalid feedback for form validation -->
+                        <div class="invalid-feedback">
+                            Please select a room type.
+                        </div>
+                    </div>
+                </div>
+                                                
+                <div class="col-md-6">
+                                                    <div class="mb-3">
+                                                        <label for="bookingNumber" class="form-label">Booking Number</label>
+                                                        <input type="text" class="form-control" name="bookingNumber" id="bookingNumber" readonly>
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+                            
+                                            <!-- Dates -->
+                                            <div class="row mb-4">
+                                                <div class="col-md-6">
+                                                    <div class="mb-3">
+                                                        <label for="checkIn" class="form-label">Check-in Date & Time</label>
+                                                        <input type="text" class="form-control" name="checkIn" id="checkIn" required>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="mb-3">
+                                                        <label for="checkOut" class="form-label">Check-out Date & Time</label>
+                                                        <input type="text" class="form-control" name="checkOut" id="checkOut" required>
+                                                    </div>
+                                                </div>
+                                            </div>
+                            
+                                            <!-- Guests -->
+                                            <div class="row mb-4">
+                                                <div class="col-md-6">
+                                                    <div class="mb-3">
+                                                        <label for="adult" class="form-label">Number of Adults</label>
+                                                        <input type="number" class="form-control" name="adult" id="adult" min="1" required>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="mb-3">
+                                                        <label for="kids" class="form-label">Number of Children</label>
+                                                        <input type="number" class="form-control" name="kids"  id="kids" min="0">
+                                                    </div>
+                                                </div>
+                                            </div>
+                            
+                                            <div class="row mt-2 mb-4">
+                                                <div class="col-md-6">
+                                                    <!-- Payment Section -->
+                                                    <div class="payment-section">
+                                                        <h5 class="mb-3">Payment Method</h5>
+                                                        <div class="form-check mb-3">
+                                                            <input class="form-check-input" type="radio" name="paymentMethod" id="cashPayment" value="cash" checked>
+                                                            <label class="form-check-label" for="cashPayment">
+                                                                Cash on Hand
+                                                            </label>
+                                                        </div>
+                                                        <div class="form-check mb-3">
+                                                            <input class="form-check-input" type="radio" name="paymentMethod" id="gcashPayment" value="gcash">
+                                                            <label class="form-check-label" for="gcashPayment">
+                                                                GCash
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <!-- Stay Duration -->
+                                                    <div class="form-group">
+                                                        <label for="stayDuration" class="form-label">Stay Duration</label>
+                                                        <select class="form-select" id="stayDuration" name="stayDuration">
+                                                            <option value="">Select Stay Duration</option>
+                                                            <option value="day-use">Day Use</option>
+                                                            <option value="overnight">Overnight</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                            
+                                                <!-- GCash QR Section -->
+                                                <div id="gcashQRSection" class="qr-section">
+                                                    <div class="alert alert-info">
+                                                        Scan this QR code to pay via GCash
+                                                    </div>
+                                                    <img src="../assets/images/gcash-qr.png.png" alt="GCash QR Code" class="qr-code" style="width: 200px; height: 210px;">
+                                                    <div class="payment-instructions">
+                                                        <h5>Payment Instructions:</h5>
+                                                        <ol>
+                                                            <li>Open your GCash app</li>
+                                                            <li>Scan the QR code above</li>
+                                                            <li>Enter the exact amount: ₱<span id="gcashAmount">0.00</span></li>
+                                                            <li>Complete the payment</li>
+                                                            <li>Upload your payment screenshot below</li>
+                                                        </ol>
+                                                    </div>
+                                                    
+                                                    <div class="proof-upload mt-3">
+                                                        <label for="paymentProof" class="form-label">Upload Payment Screenshot</label>
+                                                        <input type="file" class="form-control" name="paymentProof" id="paymentProof" accept="image/*">
+                                                        <img id="proofPreview" class="image-preview">
+                                                    </div>
+                                                </div>
+                                            
+                            
+                                            <!-- Special Request -->
+                                            <div class="mb-4">
+                                                <label for="specialRequest" class="form-label">Special Requests</label>
+                                                <textarea class="form-control" name="specialRequest" id="specialRequest" rows="3"></textarea>
+                                            </div>
+                            
+                                            <!-- Total Amount -->
+                        <div class="form-group mb-4">
+                            <label for="totalAmount" class="form-label">Total Amount</label>
+                            <input type="text" class="form-control price-display" name="totalAmount" id="totalAmount" value="₱0.00" readonly>
+                        </div>
+                            
+                                            <button type="submit" class="btn btn-primary btn-lg w-100">Confirm Booking</button>
+                                        </form>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </main>
+            
+            
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script>
+    const sidebarToggle = document.querySelector("#sidebar-toggle");
+sidebarToggle.addEventListener("click",function(){
+    document.querySelector("#sidebar").classList.toggle("collapsed");
+});
+
+
+
+     // Initialize date pickers
+     flatpickr("#checkIn", {
+    enableTime: true,
+    dateFormat: "Y-m-d H:i",
+    minDate: "today"
+});
+
+flatpickr("#checkOut", {
+    enableTime: true,
+    dateFormat: "Y-m-d H:i",
+    minDate: "today"
+});
+
+// Generate booking number when page loads
+document.addEventListener('DOMContentLoaded', function() {
+    generateBookingNumber();
+});
+
+// Generate unique booking number
+function generateBookingNumber() {
+    const timestamp = new Date().getTime();
+    const random = Math.floor(Math.random() * 1000).toString().padStart(3, '0');
+    const bookingNumber = `BK${timestamp}${random}`;
+    document.getElementById('bookingNumber').value = bookingNumber;
+}
+
+// Handle payment method change
+document.querySelectorAll('input[name="paymentMethod"]').forEach(radio => {
+    radio.addEventListener('change', function() {
+        const gcashSection = document.getElementById('gcashQRSection');
+        const proofUpload = document.querySelector('.proof-upload');
+        
+        if (this.value === 'gcash') {
+            gcashSection.style.display = 'block';
+            proofUpload.style.display = 'block';
+        } else {
+            gcashSection.style.display = 'none';
+            proofUpload.style.display = 'none';
+        }
+    });
+});
+
+// Handle image preview
+document.getElementById('paymentProof').addEventListener('change', function(e) {
+    const preview = document.getElementById('proofPreview');
+    const file = e.target.files[0];
+    const reader = new FileReader();
+
+    reader.onload = function(e) {
+        preview.src = e.target.result;
+        preview.style.display = 'block';
+    }
+
+    if (file) {
+        reader.readAsDataURL(file);
+    }
+});
+
+// Form submission handler
+document.getElementById('bookingForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    alert('Booking submitted successfully!');
+});
+    </script>
+</body>
+
+</html>

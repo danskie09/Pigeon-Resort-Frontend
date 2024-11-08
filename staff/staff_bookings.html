@@ -243,12 +243,140 @@
             
         </div>
     </div>
+
+
+    <!-- modal start -->
+<!-- Add this modal HTML after your table div -->
+<div class="modal fade" id="bookingModal" tabindex="-1" aria-labelledby="bookingModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="bookingModalLabel">Booking Details</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row g-3">
+                    <div class="col-md-6">
+                        <label class="fw-bold">Booking #:</label>
+                        <p id="modalBookingNumber"></p>
+                    </div>
+                    <div class="col-md-6">
+                        <label class="fw-bold">Room:</label>
+                        <p id="modalRoom"></p>
+                    </div>
+                    <div class="col-md-6">
+                        <label class="fw-bold">Guest:</label>
+                        <p id="modalGuest"></p>
+                    </div>
+                    <div class="col-md-6">
+                        <label class="fw-bold">Check In:</label>
+                        <p id="modalCheckIn"></p>
+                    </div>
+                    <div class="col-md-6">
+                        <label class="fw-bold">Check Out:</label>
+                        <p id="modalCheckOut"></p>
+                    </div>
+                    <div class="col-md-6">
+                        <label class="fw-bold">Guests:</label>
+                        <p id="modalGuests"></p>
+                    </div>
+                    <div class="col-md-6">
+                        <label class="fw-bold">Stay Duration:</label>
+                        <p id="modalStayDuration"></p>
+                    </div>
+                    <div class="col-md-6">
+                        <label class="fw-bold">Payment Status:</label>
+                        <p id="modalPayment"></p>
+                    </div>
+                    <div class="col-md-6">
+                        <label class="fw-bold">Amount:</label>
+                        <p id="modalAmount"></p>
+                    </div>
+                    <div class="col-md-6">
+                        <label class="fw-bold">Status:</label>
+                        <p id="modalStatus"></p>
+                    </div>
+                </div>
+
+                <!-- Second column for proof and special request -->
+                <div class="col-md-6">
+                    <div class="mb-4">
+                        <label class="fw-bold mb-2">Proof of Payment:</label>
+                        <div class="border rounded p-2">
+                            <img id="modalPaymentProof" src="" alt="Payment Proof" class="img-fluid mb-2" style="max-height: 200px; display: none;">
+                            <div id="noProofMessage" class="text-muted">No proof of payment uploaded</div>
+                        </div>
+                    </div>
+                    <div>
+                        <label class="fw-bold mb-2">Special Request:</label>
+                        <div class="border rounded p-2">
+                            <p id="modalSpecialRequest" class="mb-0 text-muted">No special requests</p>
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+    <!-- modal end -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"></script>
     <script>
     const sidebarToggle = document.querySelector("#sidebar-toggle");
 sidebarToggle.addEventListener("click",function(){
     document.querySelector("#sidebar").classList.toggle("collapsed");
 });
+
+
+
+// Function to open modal and populate data
+function viewBookingDetails(button) {
+        // Get the parent row
+        const row = button.closest('tr');
+        
+        // Get all the data from the row
+        const bookingNumber = row.querySelector('td:nth-child(1)').textContent;
+        const room = row.querySelector('td:nth-child(2)').textContent;
+        const guest = row.querySelector('td:nth-child(3)').textContent;
+        const checkIn = row.querySelector('td:nth-child(4)').textContent;
+        const checkOut = row.querySelector('td:nth-child(5)').textContent;
+        const guests = row.querySelector('td:nth-child(6)').textContent;
+        const stayDuration = row.querySelector('td:nth-child(7)').textContent;
+        const payment = row.querySelector('td:nth-child(8)').innerHTML;
+        const amount = row.querySelector('td:nth-child(9)').textContent;
+        const status = row.querySelector('td:nth-child(10)').innerHTML;
+
+        // Populate the modal with the data
+        document.getElementById('modalBookingNumber').textContent = bookingNumber;
+        document.getElementById('modalRoom').textContent = room;
+        document.getElementById('modalGuest').textContent = guest;
+        document.getElementById('modalCheckIn').textContent = checkIn;
+        document.getElementById('modalCheckOut').textContent = checkOut;
+        document.getElementById('modalGuests').textContent = guests;
+        document.getElementById('modalStayDuration').textContent = stayDuration;
+        document.getElementById('modalPayment').innerHTML = payment;
+        document.getElementById('modalAmount').textContent = amount;
+        document.getElementById('modalStatus').innerHTML = status;
+
+        // Open the modal
+        const bookingModal = new bootstrap.Modal(document.getElementById('bookingModal'));
+        bookingModal.show();
+    }
+
+    // Add click event listeners to all View buttons
+    document.addEventListener('DOMContentLoaded', function() {
+        const viewButtons = document.querySelectorAll('button[title="View Details"]');
+        viewButtons.forEach(button => {
+            button.onclick = function() {
+                viewBookingDetails(this);
+            };
+        });
+    });
     </script>
 </body>
 

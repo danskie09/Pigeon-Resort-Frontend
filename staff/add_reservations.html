@@ -6,13 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pigeon Resort | Add Booking</title>
+    <title>Pigeon Resort | Add Reservation</title>
     
     <link rel="icon" href="../assets/images/logo.webp" type="image/webp">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css">
     <script src="https://kit.fontawesome.com/ae360af17e.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="../staff/css/add_bookings.css">
+    
 
 
     <!-- from booking css -->
@@ -21,7 +21,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="../staff/css/add_booking.css">
+    <link rel="stylesheet" href="../staff/css/add_reservation.css">
 </head>
 
 <body>
@@ -142,12 +142,14 @@
                 <div class="container-fluid">
                     
                     <!-- content goes here -->
+
+
                     <div class="container py-5">
                         <div class="row justify-content-center">
                             <div class="col-md-8">
                                 <div class="card shadow">
                                     <!-- Header with background and thumbnails -->
-                                    <div class="booking-header">
+                                    <div class="reservation-header">
                                         <div class="header-background">
                                             <img src="../assets/images/pigeon-bg.webp" alt="Beautiful beach background">
                                         </div>
@@ -165,125 +167,120 @@
                                     </div>
                 
                                     <div class="card-body p-4">
-                                        <h2 class="text-center mb-4">Room Booking</h2>
+                                        <h2 class="text-center mb-4">Add Reservation</h2>
                                         <p class="text-center text-muted mb-4">Experience something new every moment</p>
                 
-                                        <form id="bookingForm">
-                                            <!-- Basic booking details -->
-                                            <div class="row mb-4">
-                                            <div class="col-md-6">
-                                                <div class="mb-3">
-                                                    <label for="firstname" class="form-label">First Name</label>
-                                                    <input type="text" class="form-control" name="firstname" id="firstname">
-                                                </div>
-                                            </div>
-
-
-                                            <div class="col-md-6">
-                                                <div class="mb-3">
-                                                    <label for="lastname" class="form-label">Last Name</label>
-                                                    <input type="text" class="form-control" name="lastname" id="lastname">
-                                                </div>
-                                            </div>
-
-                                            </div>
+                                        <form id="reservationForm">
+                                            <!-- Basic reservation details -->
 
 
                                             <div class="row mb-4">
                                                 <div class="col-md-6">
                                                     <div class="mb-3">
-                                                        <label for="email" class="form-label">Email</label>
-                                                        <input type="email" class="form-control" name="email" id="email">
+                                                        <label for="firstname" class="form-label">First Name</label>
+                                                        <input type="text" class="form-control" name="firstname" id="firstname">
                                                     </div>
                                                 </div>
     
     
                                                 <div class="col-md-6">
                                                     <div class="mb-3">
-                                                        <label for="nationality" class="form-label">Nationality</label>
-                                                        <input type="text" class="form-control" name="nationality" id="nationality">
+                                                        <label for="lastname" class="form-label">Last Name</label>
+                                                        <input type="text" class="form-control" name="lastname" id="lastname">
                                                     </div>
                                                 </div>
     
                                                 </div>
+    
+    
                                                 <div class="row mb-4">
-                                            
+                                                    <div class="col-md-6">
+                                                        <div class="mb-3">
+                                                            <label for="email" class="form-label">Email</label>
+                                                            <input type="email" class="form-control" name="email" id="email">
+                                                        </div>
+                                                    </div>
+        
+        
+                                                    <div class="col-md-6">
+                                                        <div class="mb-3">
+                                                            <label for="nationality" class="form-label">Nationality</label>
+                                                            <input type="text" class="form-control" name="nationality" id="nationality">
+                                                        </div>
+                                                    </div>
+        
+                                                    </div>
+                                            <div class="row mb-4">
                                                 <!-- Replace the existing room selection div in your form -->
-                <div class="row mb-4">
-                    <div class="col-12">
-                        <label class="form-label mb-3">Select Room <span class="text-danger">*</span></label>
-                        <div class="row g-4">
-                            <!-- Deluxe Room -->
-                            <div class="col-md-4">
-                                <div class="card room-card h-100">
-                                    <input type="radio" class="btn-check" name="roomType" id="room1" value="1" required>
-                                    <label class="btn card-body p-0" for="room1">
-                                        <img src="../assets/images/room101.webp" class="card-img-top" alt="Deluxe Room" style="height: 200px; object-fit: cover;">
-                                        <div class="p-3">
-                                            <h5 class="card-title">Deluxe Room</h5>
-                                            <ul class="list-unstyled mb-0">
-                                                <li><i class="bi bi-people-fill"></i> Max 2 Adults</li>
-                                                <li><i class="bi bi-wifi"></i> Free WiFi</li>
-                                                <li><i class="bi bi-tv"></i> Smart TV</li>
-                                            </ul>
-                                        </div>
-                                    </label>
-                                </div>
-                            </div>
-                
-                            <!-- Superior Room -->
-                            <div class="col-md-4">
-                                <div class="card room-card h-100">
-                                    <input type="radio" class="btn-check" name="roomType" id="room2" value="2" required>
-                                    <label class="btn card-body p-0" for="room2">
-                                        <img src="../assets/images/room102.webp" class="card-img-top" alt="Superior Room" style="height: 200px; object-fit: cover;">
-                                        <div class="p-3">
-                                            <h5 class="card-title">Superior Room</h5>
-                                            <ul class="list-unstyled mb-0">
-                                                <li><i class="bi bi-people-fill"></i> Max 3 Adults</li>
-                                                <li><i class="bi bi-wifi"></i> Free WiFi</li>
-                                                <li><i class="bi bi-tv"></i> Smart TV</li>
-                                            </ul>
-                                        </div>
-                                    </label>
-                                </div>
-                            </div>
-
-
-                
-                            <!-- Executive Suite -->
-                            <div class="col-md-4">
-                                <div class="card room-card h-100">
-                                    <input type="radio" class="btn-check" name="roomType" id="room3" value="3" required>
-                                    <label class="btn card-body p-0" for="room3">
-                                        <img src="../assets/images/room103.webp" class="card-img-top" alt="Executive Suite" style="height: 200px; object-fit: cover;">
-                                        <div class="p-3">
-                                            <h5 class="card-title">Executive Suite</h5>
-                                            <ul class="list-unstyled mb-0">
-                                                <li><i class="bi bi-people-fill"></i> Max 4 Adults</li>
-                                                <li><i class="bi bi-wifi"></i> Free WiFi</li>
-                                                <li><i class="bi bi-tv"></i> Smart TV</li>
-                                            </ul>
-                                        </div>
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Add invalid feedback for form validation -->
-                        <div class="invalid-feedback">
-                            Please select a room type.
-                        </div>
-                    </div>
-                </div>
-                                                
-                <div class="col-md-6">
-                                                    <div class="mb-3">
-                                                        <label for="bookingNumber" class="form-label">Booking Number</label>
-                                                        <input type="text" class="form-control" name="bookingNumber" id="bookingNumber" readonly>
+                                                <div class="row mb-4">
+                                                    <div class="col-12">
+                                                        <label class="form-label mb-3">Select Accommodation <span class="text-danger">*</span></label>
+                                                        <div class="row g-4">
+                                                            <!-- Cottage -->
+                                                            <div class="col-md-4">
+                                                                <div class="card room-card h-100">
+                                                                    <input type="radio" class="btn-check" name="accommodation" id="cottage" value="cottage" required>
+                                                                    <label class="btn card-body p-0" for="cottage">
+                                                                        <img src="../assets/images/cottage-reserve.jpg" class="card-img-top" alt="Cottage" style="height: 200px; object-fit: cover;">
+                                                                        <div class="p-3">
+                                                                            <h5 class="card-title">Cottage</h5>
+                                                                            <ul class="list-unstyled mb-0">
+                                                                                <li><i class="bi bi-people-fill"></i> Max 4 Adults</li>
+                                                                                <li><i class="bi bi-wifi"></i> Free WiFi</li>
+                                                                                <li><i class="bi bi-tv"></i> Smart TV</li>
+                                                                                <li><i class="bi bi-cup-hot"></i> Kitchenette</li>
+                                                                            </ul>
+                                                                        </div>
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                            <!-- Gazebo -->
+                                                            <div class="col-md-4">
+                                                                <div class="card room-card h-100">
+                                                                    <input type="radio" class="btn-check" name="accommodation" id="gazebo" value="gazebo" required>
+                                                                    <label class="btn card-body p-0" for="gazebo">
+                                                                        <img src="../assets/images/gazebo.jpg" class="card-img-top" alt="Gazebo" style="height: 200px; object-fit: cover;">
+                                                                        <div class="p-3">
+                                                                            <h5 class="card-title">Gazebo</h5>
+                                                                            <ul class="list-unstyled mb-0">
+                                                                                <li><i class="bi bi-people-fill"></i> Max 2 Adults</li>
+                                                                                <li><i class="bi bi-wifi"></i> Free WiFi</li>
+                                                                                <li><i class="bi bi-sunset"></i> Scenic View</li>
+                                                                            </ul>
+                                                                        </div>
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                            <!-- Luxury Villa -->
+                                                            <div class="col-md-4">
+                                                                <div class="card room-card h-100">
+                                                                    <input type="radio" class="btn-check" name="accommodation" id="villa" value="villa" required>
+                                                                    <label class="btn card-body p-0" for="villa">
+                                                                        <img src="../assets/images/native.jpg" class="card-img-top" alt="Luxury Villa" style="height: 200px; object-fit: cover;">
+                                                                        <div class="p-3">
+                                                                            <h5 class="card-title">Native</h5>
+                                                                            <ul class="list-unstyled mb-0">
+                                                                                <li><i class="bi bi-people-fill"></i> Max 6 Adults</li>
+                                                                                <li><i class="bi bi-wifi"></i> Free WiFi</li>
+                                                                                <li><i class="bi bi-cup-hot"></i> Private Pool</li>
+                                                                            </ul>
+                                                                        </div>
+                                                                    </label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <!-- Add invalid feedback for form validation -->
+                                                        <div class="invalid-feedback">
+                                                            Please select an accommodation.
+                                                        </div>
                                                     </div>
                                                 </div>
-
-
+                                                <div class="col-md-6">
+                                                    <div class="mb-3">
+                                                        <label for="reservationNumber" class="form-label">Reservation Number</label>
+                                                        <input type="text" class="form-control" name="reservationNumber"  id="reservationNumber" readonly>
+                                                    </div>
+                                                </div>
                                             </div>
                             
                                             <!-- Dates -->
@@ -313,11 +310,55 @@
                                                 <div class="col-md-6">
                                                     <div class="mb-3">
                                                         <label for="kids" class="form-label">Number of Children</label>
-                                                        <input type="number" class="form-control" name="kids"  id="kids" min="0">
+                                                        <input type="number" class="form-control" name="kids" id="kids" min="0">
                                                     </div>
                                                 </div>
                                             </div>
-                            
+                
+                
+                                             <!-- Additional Services Section -->
+                                             <div class="mb-4">
+                                                <h5 class="border-bottom pb-2">Additional Services</h5>
+                                                <div class="row g-3">
+                                                    <!-- Service Card 1 -->
+                                                    <div class="col-md-6">
+                                                        <div class="card h-100">
+                                                            <div class="card-body">
+                                                                <div class="form-check d-flex justify-content-between align-items-center">
+                                                                    <div>
+                                                                        <input class="form-check-input" type="checkbox" name="services[]" value="1">
+                                                                        <label class="form-check-label">
+                                                                            Karaoke
+                                                                            <br>
+                                                                            <small class="text-muted">P 500.00</small>
+                                                                        </label>
+                                                                    </div>
+                                                                    <i class="fa-solid fa-music text-primary"></i>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                
+                                                    <!-- Service Card 2 -->
+                                                    <div class="col-md-6">
+                                                        <div class="card h-100">
+                                                            <div class="card-body">
+                                                                <div class="form-check d-flex justify-content-between align-items-center">
+                                                                    <div>
+                                                                        <input class="form-check-input" type="checkbox" name="services[]" value="2">
+                                                                        <label class="form-check-label">
+                                                                            Table and Chairs
+                                                                            <br>
+                                                                            <small class="text-muted">P 100.00</small>
+                                                                        </label>
+                                                                    </div>
+                                                                    <i class="fa-solid fa-chair text-primary"></i>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                
+                                                    
                                             <div class="row mt-2 mb-4">
                                                 <div class="col-md-6">
                                                     <!-- Payment Section -->
@@ -349,7 +390,9 @@
                                                     </div>
                                                 </div>
                                             </div>
-                            
+                
+                                        
+                                            
                                                 <!-- GCash QR Section -->
                                                 <div id="gcashQRSection" class="qr-section">
                                                     <div class="alert alert-info">
@@ -373,21 +416,24 @@
                                                         <img id="proofPreview" class="image-preview">
                                                     </div>
                                                 </div>
+                                            </div>
+                
+                                            </div>
                                             
                             
                                             <!-- Special Request -->
                                             <div class="mb-4">
                                                 <label for="specialRequest" class="form-label">Special Requests</label>
-                                                <textarea class="form-control" name="specialRequest" id="specialRequest" rows="3"></textarea>
+                                                <textarea class="form-control"    name="specialRequest"  id="specialRequest" rows="3"></textarea>
                                             </div>
                             
-                                            <!-- Total Amount -->
+                                           <!-- Total Amount -->
                         <div class="form-group mb-4">
                             <label for="totalAmount" class="form-label">Total Amount</label>
                             <input type="text" class="form-control price-display" name="totalAmount" id="totalAmount" value="₱0.00" readonly>
                         </div>
                             
-                                            <button type="submit" class="btn btn-primary btn-lg w-100">Confirm Booking</button>
+                                            <button type="submit" class="btn btn-primary btn-lg w-100">Confirm Reservation</button>
                                         </form>
                                         
                                     </div>
@@ -395,6 +441,9 @@
                             </div>
                         </div>
                     </div>
+
+
+                    <!-- content end -->
             </main>
             
             
@@ -423,17 +472,30 @@ flatpickr("#checkOut", {
     minDate: "today"
 });
 
-// Generate booking number when page loads
-document.addEventListener('DOMContentLoaded', function() {
-    generateBookingNumber();
+// Initialize date pickers
+flatpickr("#checkIn", {
+    enableTime: true,
+    dateFormat: "Y-m-d H:i",
+    minDate: "today"
 });
 
-// Generate unique booking number
-function generateBookingNumber() {
+flatpickr("#checkOut", {
+    enableTime: true,
+    dateFormat: "Y-m-d H:i",
+    minDate: "today"
+});
+
+// Generate reservation number when page loads
+document.addEventListener('DOMContentLoaded', function() {
+    generateReservationNumber();
+});
+
+// Generate unique reservation number
+function generateReservationNumber() {
     const timestamp = new Date().getTime();
     const random = Math.floor(Math.random() * 1000).toString().padStart(3, '0');
-    const bookingNumber = `BK${timestamp}${random}`;
-    document.getElementById('bookingNumber').value = bookingNumber;
+    const reservationNumber = `RS${timestamp}${random}`;
+    document.getElementById('reservationNumber').value = reservationNumber;
 }
 
 // Handle payment method change
@@ -469,9 +531,9 @@ document.getElementById('paymentProof').addEventListener('change', function(e) {
 });
 
 // Form submission handler
-document.getElementById('bookingForm').addEventListener('submit', function(e) {
+document.getElementById('reservationForm').addEventListener('submit', function(e) {
     e.preventDefault();
-    alert('Booking submitted successfully!');
+    alert('Reservation submitted successfully!');
 });
     </script>
 </body>

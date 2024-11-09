@@ -2,24 +2,14 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pigeon Resort | Staff Services</title>
-
-  <link rel="icon" href="../assets/images/logo.webp" type="image/webp">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pigeon Resort | Staff Housekeeping</title>
+  <link rel="icon" href="../assets/images/logo.webp" type="image/webp" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" />
   <script src="https://kit.fontawesome.com/ae360af17e.js" crossorigin="anonymous"></script>
-  <link href="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.css" rel="stylesheet" />
-
-
-
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-  <link rel="stylesheet" href="../staff/css/staff_services.css">
-
-
-
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+  <link rel="stylesheet" href="../staff/css/housekeeping.css" />
 </head>
 
 <body>
@@ -113,10 +103,9 @@
           <ul class="navbar-nav">
             <li class="nav-item dropdown">
               <a href="#" data-bs-toggle="dropdown" class="nav-icon pe-md-0">
-                <img src="../staff/images/user.png" class="avatar img-fluid rounded" alt="">
+                <img src="../staff/images/user.png" class="avatar img-fluid rounded" alt="" />
               </a>
               <div class="dropdown-menu dropdown-menu-end">
-
                 <a href="#" class="dropdown-item">Logout</a>
               </div>
             </li>
@@ -125,19 +114,16 @@
       </nav>
       <main class="content px-3 py-2">
         <div class="container-fluid">
-
           <!-- content starts here -->
-
-
 
           <div class="container-fluid p-4">
             <div class="card shadow">
               <!-- Add this button just below the card-header div -->
               <div class="card-header bg-primary text-white d-flex justify-content-between align-items-center">
-                <h5 class="card-title mb-0">Services</h5>
+                <h5 class="card-title mb-0">House Keeping</h5>
                 <button type="button" class="btn btn-warning text-white" data-bs-toggle="modal"
-                  data-bs-target="#addServiceModal">
-                  <i class="bi bi-plus-circle me-2"></i>Add Service
+                  data-bs-target="#addHouseKeepingModal">
+                  <i class="bi bi-plus-circle me-2"></i>Assign
                 </button>
               </div>
               <div class="card-body">
@@ -145,93 +131,81 @@
                   <table class="table table-hover align-middle">
                     <thead class="table-light">
                       <tr>
-                        <th>Service ID</th>
+                        <th>ID</th>
 
-                        <th>Name</th>
-                        <th>Description</th>
+                        <th>Room #</th>
+                        <th>Staff Assigned</th>
 
-                        <th>Price</th>
-                        <th>Image</th>
                         <th>Status</th>
                         <th>Actions</th>
                       </tr>
                     </thead>
                     <tbody>
                       <tr>
-
                         <td>1</td>
-                        <td><span class="fw-medium">Karaoke</span></td>
-                        <td>with 1 day karaoke</td>
-                        <td>P 3,500.00</td>
-                        <td>
-                          <img src="/api/placeholder/50/50" alt="Image" class="img-thumbnail"
-                            style="width: 50px; height: 50px; object-fit: cover;">
-                        </td>
+                        <td><span class="fw-medium">RM-001</span></td>
+                        <td>Daniel Banaybanay</td>
+                        <td><span class="badge bg-success">Done</span></td>
 
-
-
-                        <td><span class="badge bg-success">Available</span></td>
                         <td>
                           <div class="btn-group btn-group-sm">
-                            <button class="btn btn-primary me-2" title="Edit Room">
-                              <i class="bi bi-pencil text-light"></i>
+                            <button class="btn btn-primary me-2" title="Done">
+                              <i class="fa-regular fa-circle-check"></i>
                             </button>
-                            <button class="btn btn-secondary" title="Delete Room">
-                              <i class="bi bi-trash"></i>
+                            <button class="btn btn-secondary" title="In Progress">
+                              <i class="fa-solid fa-clock-rotate-left"></i>
                             </button>
+
+
                           </div>
                         </td>
                       </tr>
+
                       <tr>
+                        <td>1</td>
+                        <td><span class="fw-medium">RM-001</span></td>
+                        <td>Daniel Banaybanay</td>
+                        <td><span class="badge bg-success">Done</span></td>
 
-                        <td>2</td>
-                        <td><span class="fw-medium">Karaoke</span></td>
-                        <td>with 1 day karaoke</td>
-                        <td>P 3,500.00</td>
-                        <td>
-                          <img src="/api/placeholder/50/50" alt="Image" class="img-thumbnail"
-                            style="width: 50px; height: 50px; object-fit: cover;">
-                        </td>
-
-
-
-                        <td><span class="badge bg-success">Available</span></td>
                         <td>
                           <div class="btn-group btn-group-sm">
-                            <button class="btn btn-primary me-2" title="Edit Room">
-                              <i class="bi bi-pencil text-light"></i>
+                            <button class="btn btn-primary me-2" title="Done">
+                              <i class="fa-regular fa-circle-check"></i>
                             </button>
-                            <button class="btn btn-secondary" title="Delete Room">
-                              <i class="bi bi-trash"></i>
+                            <button class="btn btn-secondary" title="In Progress">
+                              <i class="fa-solid fa-clock-rotate-left"></i>
                             </button>
+
+
                           </div>
                         </td>
                       </tr>
+
+
                       <tr>
-
-                        <td>3</td>
-                        <td><span class="fw-medium">Karaoke</span></td>
-                        <td>with 1 day karaoke</td>
-                        <td>P 3,500.00</td>
-                        <td>
-                          <img src="/api/placeholder/50/50" alt="Image" class="img-thumbnail"
-                            style="width: 50px; height: 50px; object-fit: cover;">
+                        <td>1</td>
+                        <td><span class="fw-medium">RM-001</span></td>
+                        <td>Daniel Banaybanay</td>
+                        <td><span class="badge bg-primary">In Progress</span>
                         </td>
 
-
-
-                        <td><span class="badge bg-success">Available</span></td>
                         <td>
                           <div class="btn-group btn-group-sm">
-                            <button class="btn btn-primary me-2" title="Edit Room">
-                              <i class="bi bi-pencil text-light"></i>
+                            <button class="btn btn-primary me-2" title="Done">
+                              <i class="fa-regular fa-circle-check"></i>
                             </button>
-                            <button class="btn btn-secondary" title="Delete Room">
-                              <i class="bi bi-trash"></i>
+                            <button class="btn btn-secondary" title="In Progress">
+                              <i class="fa-solid fa-clock-rotate-left"></i>
                             </button>
+
+
                           </div>
                         </td>
                       </tr>
+
+
+
+
                     </tbody>
                   </table>
                 </div>
@@ -239,93 +213,80 @@
             </div>
           </div>
 
-
-
-
-
-
           <!-- content ends here -->
         </div>
       </main>
 
 
+
+
+
       <!-- modal start -->
 
       <!-- Add this modal code before the closing body tag -->
-      <div class="modal fade" id="addServiceModal" tabindex="-1" aria-labelledby="addServiceModalLabel"
+      <div class="modal fade" id="addHouseKeepingModal" tabindex="-1" aria-labelledby="addHouseKeepingModalLabel"
         aria-hidden="true">
         <div class="modal-dialog modal-lg">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title" id="addRoomModalLabel">Add New Service</h5>
+              <h5 class="modal-title" id="addHouseKeepingModalLabel">Assign</h5>
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-              <form id="addServiceForm">
+              <form id="housekeepingForm">
                 <div class="row g-3">
-
                   <div class="col-md-6">
-                    <label for="Name" class="form-label">Name</label>
-                    <input type="text" class="form-control" name="name" id="Name" required>
-                  </div>
-
-                  <div class="col-12">
-                    <label for="description" class="form-label">Description</label>
-                    <textarea class="form-control" name="description " id="description" rows="3" required></textarea>
-                  </div>
-
-                  <div class="col-md-6">
-                    <label for="price" class="form-label">Price</label>
-                    <div class="input-group">
-                      <span class="input-group-text">₱</span>
-                      <input type="number" class="form-control" name="price" id="price" required min="0" step="0.01">
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <label for="status" class="form-label">Status</label>
-                    <select class="form-select" name="status" id="status" required>
-                      <option value="">Select status</option>
-                      <option value="Available">Available</option>
-                      <option value="Occupied">Occupied</option>
-
+                    <label for="room" class="form-label">Room</label>
+                    <select class="form-select" name="room" id="room" required>
+                      <option value="">Select Room</option>
+                      <option value="Room-101">Room-101</option>
+                      <option value="Room-102">Room-102</option>
+                      <option value="Room-103">Room-103</option>
+                      <option value="Room-104">Room-104</option>
                     </select>
                   </div>
 
-                  <div class="col-12">
-                    <label for="facilityImage" class="form-label">Image</label>
-                    <input type="file" class="form-control" name="image" id="Image" accept="image/*" required>
+                  <div class="col-md-6">
+                    <label for="staff" class="form-label">Staff</label>
+                    <select class="form-select" name="staff" id="staff" required>
+                      <option value="">Assign Staff</option>
+                      <option value="John Doe">John Doe</option>
+                      <option value="Jane Doe">Jane Doe</option>
+                    </select>
+                  </div>
+
+                  <div class="col-md-6">
+                    <label for="status" class="form-label">Status</label>
+                    <select class="form-select" name="status" id="status" required>
+                      <option value="">Select Status</option>
+                      <option value="Done">Done</option>
+                      <option value="In Progress">In Progress</option>
+                    </select>
                   </div>
                 </div>
               </form>
             </div>
             <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-              <button type="submit" form="addRoomForm" class="btn btn-primary">Add Service</button>
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                Close
+              </button>
+              <button type="submit" form="housekeepingForm" class="btn btn-primary">
+                Assign
+              </button>
             </div>
           </div>
         </div>
       </div>
 
-
       <!-- modal end -->
 
-
-    </div>
-  </div>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"></script>
-
-  <script>
-
-
-
-
-    const sidebarToggle = document.querySelector("#sidebar-toggle");
-    sidebarToggle.addEventListener("click", function () {
-      document.querySelector("#sidebar").classList.toggle("collapsed");
-    });
-
-
-  </script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"></script>
+      <script>
+        const sidebarToggle = document.querySelector("#sidebar-toggle");
+        sidebarToggle.addEventListener("click", function () {
+          document.querySelector("#sidebar").classList.toggle("collapsed");
+        });
+      </script>
 </body>
 
 </html>

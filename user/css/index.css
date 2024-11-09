@@ -105,7 +105,7 @@ body {
   }
 
   .btn-secondary1 {
-    background-color: var(--accent-orange); /* Change to your desired color */
+    background-color: var(--light-orange); /* Change to your desired color */
     color: whitesmoke;
    border: none;
    flex: 1;

@@ -7,7 +7,7 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pigeon Resort | Staff Reservations</title>
-    
+
     <link rel="icon" href="../assets/images/logo.webp" type="image/webp">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css">
     <script src="https://kit.fontawesome.com/ae360af17e.js" crossorigin="anonymous"></script>
@@ -22,13 +22,11 @@
             <div class="h-100">
                 <div class="sidebar-logo d-flex justify-content-center">
                     <a href="#">
-                        <img src="../assets/images/logo.webp" alt="Logo" style="max-width: 200px; height: 100px;"/>
+                        <img src="../assets/images/logo.webp" alt="Logo" style="max-width: 200px; height: 100px" />
                     </a>
                 </div>
                 <ul class="sidebar-nav">
-                    <li class="sidebar-header">
-                        Main
-                    </li>
+                    <li class="sidebar-header">Main</li>
                     <li class="sidebar-item">
                         <a href="../staff/dashboard.html" class="sidebar-link">
                             <i class="fa-solid fa-gauge-high pe-2"></i>
@@ -36,12 +34,12 @@
                         </a>
                     </li>
                     <li class="sidebar-item">
-                        <a href="#" class="sidebar-link collapsed d-flex align-items-center" data-bs-target="#pages" data-bs-toggle="collapse"
-   aria-expanded="false">
-    <i class="fa-solid fa-calendar-check pe-2"></i>
-    Bookings
-    <span class="badge ms-2 notification-badge" style="background-color: orange;">15</span>
-</a>
+                        <a href="#" class="sidebar-link collapsed d-flex align-items-center" data-bs-target="#pages"
+                            data-bs-toggle="collapse" aria-expanded="false">
+                            <i class="fa-solid fa-calendar-check pe-2"></i>
+                            Bookings
+                            <span class="badge ms-2 notification-badge" style="background-color: orange">15</span>
+                        </a>
 
                         <ul id="pages" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
                             <li class="sidebar-item">
@@ -54,8 +52,8 @@
                     </li>
                     <li class="sidebar-item">
                         <a href="#" class="sidebar-link collapsed" data-bs-target="#posts" data-bs-toggle="collapse"
-                            aria-expanded="false"><i class="fa-solid fa-calendar-days pe-2"></i>
-                            Reservations  <span class="badge ms-2 notification-badge" style="background-color: orange;">6</span>
+                            aria-expanded="false"><i class="fa-solid fa-calendar-days pe-2"></i> Reservations
+                            <span class="badge ms-2 notification-badge" style="background-color: orange">6</span>
                         </a>
                         <ul id="posts" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
                             <li class="sidebar-item">
@@ -64,15 +62,10 @@
                             <li class="sidebar-item">
                                 <a href="../staff/add_reservations.html" class="sidebar-link">Add Reservations</a>
                             </li>
-                           
                         </ul>
                     </li>
-                    
-                    <li class="sidebar-header">
-                        Management
-                    </li>
 
-                    
+                    <li class="sidebar-header">Management</li>
 
                     <li class="sidebar-item">
                         <a href="../staff/staff_rooms.html" class="sidebar-link">
@@ -82,34 +75,25 @@
                     </li>
 
                     <li class="sidebar-item">
-                        <a href="../staff/staff_rooms.html" class="sidebar-link">
+                        <a href="../staff/staff_facilities.html" class="sidebar-link">
                             <i class="fa-solid fa-house pe-2"></i>
                             Facilities
                         </a>
                     </li>
 
                     <li class="sidebar-item">
-                        <a href="../staff/staff_rooms.html" class="sidebar-link">
+                        <a href="../staff/staff_services.html" class="sidebar-link">
                             <i class="fa-solid fa-diagram-next pe-2"></i>
                             Additional Services
                         </a>
                     </li>
 
-
-                    
-
-
-                    
-
                     <li class="sidebar-item">
-                        <a href="" class="sidebar-link">
+                        <a href="../staff/housekeeping.html" class="sidebar-link">
                             <i class="fa-solid fa-spray-can-sparkles pe-2"></i>
                             Housekeeping
                         </a>
                     </li>
-
-
-                    
                 </ul>
             </div>
         </aside>
@@ -125,7 +109,7 @@
                                 <img src="../staff/images/user.png" class="avatar img-fluid rounded" alt="">
                             </a>
                             <div class="dropdown-menu dropdown-menu-end">
-                                
+
                                 <a href="#" class="dropdown-item">Logout</a>
                             </div>
                         </li>
@@ -134,7 +118,7 @@
             </nav>
             <main class="content px-3 py-2">
                 <div class="container-fluid">
-                    
+
                     <!-- Table Element -->
                     <div class="container-fluid p-4">
                         <div class="card shadow">
@@ -246,8 +230,8 @@
                         </div>
                     </div>
             </main>
-            
-            
+
+
         </div>
     </div>
 
@@ -255,144 +239,146 @@
     <!-- modal starts -->
 
     <!-- Modal HTML for Reservations -->
-<div class="modal fade" id="reservationModal" tabindex="-1" aria-labelledby="reservationModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="reservationModalLabel">Reservation Details</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <div class="row g-3">
-                    <!-- First column of reservation details -->
-                    <div class="col-md-6">
-                        <div class="row g-3">
-                            <div class="col-md-6">
-                                <label class="fw-bold">Reservation #:</label>
-                                <p id="modalReservationNumber"></p>
-                            </div>
-                            <div class="col-md-6">
-                                <label class="fw-bold">Accommodation:</label>
-                                <p id="modalAccommodation"></p>
-                            </div>
-                            <div class="col-md-6">
-                                <label class="fw-bold">Guest:</label>
-                                <p id="modalGuest"></p>
-                            </div>
-                            <div class="col-md-6">
-                                <label class="fw-bold">Check In:</label>
-                                <p id="modalCheckIn"></p>
-                            </div>
-                            <div class="col-md-6">
-                                <label class="fw-bold">Check Out:</label>
-                                <p id="modalCheckOut"></p>
-                            </div>
-                            <div class="col-md-6">
-                                <label class="fw-bold">Guests:</label>
-                                <p id="modalGuests"></p>
-                            </div>
-                            <div class="col-md-6">
-                                <label class="fw-bold">Additional Services:</label>
-                                <p id="modalServices"></p>
-                            </div>
-                            <div class="col-md-6">
-                                <label class="fw-bold">Stay Duration:</label>
-                                <p id="modalStayDuration"></p>
-                            </div>
-                            <div class="col-md-6">
-                                <label class="fw-bold">Payment Status:</label>
-                                <p id="modalPayment"></p>
-                            </div>
-                            <div class="col-md-6">
-                                <label class="fw-bold">Amount:</label>
-                                <p id="modalAmount"></p>
-                            </div>
-                            <div class="col-md-6">
-                                <label class="fw-bold">Status:</label>
-                                <p id="modalStatus"></p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Second column for proof and special request -->
-                    <div class="col-md-6">
-                        <div class="mb-4">
-                            <label class="fw-bold mb-2">Proof of Payment:</label>
-                            <div class="border rounded p-2">
-                                <img id="modalPaymentProof" src="" alt="Payment Proof" class="img-fluid mb-2" style="max-height: 200px; display: none;">
-                                <div id="noProofMessage" class="text-muted">No proof of payment uploaded</div>
+    <div class="modal fade" id="reservationModal" tabindex="-1" aria-labelledby="reservationModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="reservationModalLabel">Reservation Details</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row g-3">
+                        <!-- First column of reservation details -->
+                        <div class="col-md-6">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label class="fw-bold">Reservation #:</label>
+                                    <p id="modalReservationNumber"></p>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="fw-bold">Accommodation:</label>
+                                    <p id="modalAccommodation"></p>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="fw-bold">Guest:</label>
+                                    <p id="modalGuest"></p>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="fw-bold">Check In:</label>
+                                    <p id="modalCheckIn"></p>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="fw-bold">Check Out:</label>
+                                    <p id="modalCheckOut"></p>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="fw-bold">Guests:</label>
+                                    <p id="modalGuests"></p>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="fw-bold">Additional Services:</label>
+                                    <p id="modalServices"></p>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="fw-bold">Stay Duration:</label>
+                                    <p id="modalStayDuration"></p>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="fw-bold">Payment Status:</label>
+                                    <p id="modalPayment"></p>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="fw-bold">Amount:</label>
+                                    <p id="modalAmount"></p>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="fw-bold">Status:</label>
+                                    <p id="modalStatus"></p>
+                                </div>
                             </div>
                         </div>
-                        <div>
-                            <label class="fw-bold mb-2">Special Request:</label>
-                            <div class="border rounded p-2">
-                                <p id="modalSpecialRequest" class="mb-0 text-muted">No special requests</p>
+
+                        <!-- Second column for proof and special request -->
+                        <div class="col-md-6">
+                            <div class="mb-4">
+                                <label class="fw-bold mb-2">Proof of Payment:</label>
+                                <div class="border rounded p-2">
+                                    <img id="modalPaymentProof" src="" alt="Payment Proof" class="img-fluid mb-2"
+                                        style="max-height: 200px; display: none;">
+                                    <div id="noProofMessage" class="text-muted">No proof of payment uploaded</div>
+                                </div>
+                            </div>
+                            <div>
+                                <label class="fw-bold mb-2">Special Request:</label>
+                                <div class="border rounded p-2">
+                                    <p id="modalSpecialRequest" class="mb-0 text-muted">No special requests</p>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
             </div>
         </div>
     </div>
-</div>
     <!-- modal ends -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-    const sidebarToggle = document.querySelector("#sidebar-toggle");
-sidebarToggle.addEventListener("click",function(){
-    document.querySelector("#sidebar").classList.toggle("collapsed");
-});
-
-// Function to open modal and populate data
-function viewReservationDetails(button) {
-        // Get the parent row
-        const row = button.closest('tr');
-        
-        // Get all the data from the row
-        const reservationNumber = row.querySelector('td:nth-child(1)').textContent;
-        const accommodation = row.querySelector('td:nth-child(2)').textContent;
-        const guest = row.querySelector('td:nth-child(3)').textContent;
-        const checkIn = row.querySelector('td:nth-child(4)').textContent;
-        const checkOut = row.querySelector('td:nth-child(5)').textContent;
-        const guests = row.querySelector('td:nth-child(6)').textContent;
-        const services = row.querySelector('td:nth-child(7)').textContent;
-        const stayDuration = row.querySelector('td:nth-child(8)').textContent;
-        const payment = row.querySelector('td:nth-child(9)').innerHTML;
-        const amount = row.querySelector('td:nth-child(10)').textContent;
-        const status = row.querySelector('td:nth-child(11)').innerHTML;
-
-        // Populate the modal with the data
-        document.getElementById('modalReservationNumber').textContent = reservationNumber;
-        document.getElementById('modalAccommodation').textContent = accommodation;
-        document.getElementById('modalGuest').textContent = guest;
-        document.getElementById('modalCheckIn').textContent = checkIn;
-        document.getElementById('modalCheckOut').textContent = checkOut;
-        document.getElementById('modalGuests').textContent = guests;
-        document.getElementById('modalServices').textContent = services;
-        document.getElementById('modalStayDuration').textContent = stayDuration;
-        document.getElementById('modalPayment').innerHTML = payment;
-        document.getElementById('modalAmount').textContent = amount;
-        document.getElementById('modalStatus').innerHTML = status;
-
-        
-
-        // Open the modal
-        const reservationModal = new bootstrap.Modal(document.getElementById('reservationModal'));
-        reservationModal.show();
-    }
-
-    // Add click event listeners to all View buttons
-    document.addEventListener('DOMContentLoaded', function() {
-        const viewButtons = document.querySelectorAll('button[title="View Details"]');
-        viewButtons.forEach(button => {
-            button.onclick = function() {
-                viewReservationDetails(this);
-            };
+        const sidebarToggle = document.querySelector("#sidebar-toggle");
+        sidebarToggle.addEventListener("click", function () {
+            document.querySelector("#sidebar").classList.toggle("collapsed");
         });
-    });
+
+        // Function to open modal and populate data
+        function viewReservationDetails(button) {
+            // Get the parent row
+            const row = button.closest('tr');
+
+            // Get all the data from the row
+            const reservationNumber = row.querySelector('td:nth-child(1)').textContent;
+            const accommodation = row.querySelector('td:nth-child(2)').textContent;
+            const guest = row.querySelector('td:nth-child(3)').textContent;
+            const checkIn = row.querySelector('td:nth-child(4)').textContent;
+            const checkOut = row.querySelector('td:nth-child(5)').textContent;
+            const guests = row.querySelector('td:nth-child(6)').textContent;
+            const services = row.querySelector('td:nth-child(7)').textContent;
+            const stayDuration = row.querySelector('td:nth-child(8)').textContent;
+            const payment = row.querySelector('td:nth-child(9)').innerHTML;
+            const amount = row.querySelector('td:nth-child(10)').textContent;
+            const status = row.querySelector('td:nth-child(11)').innerHTML;
+
+            // Populate the modal with the data
+            document.getElementById('modalReservationNumber').textContent = reservationNumber;
+            document.getElementById('modalAccommodation').textContent = accommodation;
+            document.getElementById('modalGuest').textContent = guest;
+            document.getElementById('modalCheckIn').textContent = checkIn;
+            document.getElementById('modalCheckOut').textContent = checkOut;
+            document.getElementById('modalGuests').textContent = guests;
+            document.getElementById('modalServices').textContent = services;
+            document.getElementById('modalStayDuration').textContent = stayDuration;
+            document.getElementById('modalPayment').innerHTML = payment;
+            document.getElementById('modalAmount').textContent = amount;
+            document.getElementById('modalStatus').innerHTML = status;
+
+
+
+            // Open the modal
+            const reservationModal = new bootstrap.Modal(document.getElementById('reservationModal'));
+            reservationModal.show();
+        }
+
+        // Add click event listeners to all View buttons
+        document.addEventListener('DOMContentLoaded', function () {
+            const viewButtons = document.querySelectorAll('button[title="View Details"]');
+            viewButtons.forEach(button => {
+                button.onclick = function () {
+                    viewReservationDetails(this);
+                };
+            });
+        });
 
 
 

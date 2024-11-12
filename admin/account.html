@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pigeon Resort | Account Management</title>
+
+    <link rel="icon" href="../assets/images/logo.webp" type="image/webp">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css">
+    <script src="https://kit.fontawesome.com/ae360af17e.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.css" rel="stylesheet" />
+
+
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../admin/css/account.css">
+
+
+
+</head>
+
+<body>
+    <div class="wrapper">
+        <aside id="sidebar" class="js-sidebar">
+            <!-- Content For Sidebar -->
+            <div class="h-100">
+                <div class="sidebar-logo d-flex justify-content-center">
+                    <a href="#">
+                        <img src="../assets/images/logo.webp" alt="Logo" style="max-width: 200px; height: 100px" />
+                    </a>
+                </div>
+                <ul class="sidebar-nav">
+                    <li class="sidebar-header">Main</li>
+
+
+                    <li class="sidebar-item">
+                        <a href="../admin/index.html" class="sidebar-link">
+                            <i class="fa-solid fa-gauge-high pe-2"></i>
+
+                            Dashboard
+                        </a>
+                    </li>
+                    <li class="sidebar-item">
+                        <a href="../admin/account.html" class="sidebar-link">
+                            <i class="fa-solid fa-users pe-2"></i>
+
+                            Account Management
+                        </a>
+                    </li>
+
+
+                    <li class="sidebar-item">
+                        <a href="../admin/activity_log.html" class="sidebar-link">
+                            <i class="fa-solid fa-clock-rotate-left pe-2"></i>
+
+                            Activity Logs
+                        </a>
+                    </li>
+
+
+
+
+
+
+
+
+                </ul>
+            </div>
+        </aside>
+        <div class="main">
+            <nav class="navbar navbar-expand px-3 border-bottom">
+                <button class="btn" id="sidebar-toggle" type="button">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse navbar">
+                    <ul class="navbar-nav">
+                        <li class="nav-item dropdown">
+                            <a href="#" data-bs-toggle="dropdown" class="nav-icon pe-md-0">
+                                <img src="../staff/images/user.png" class="avatar img-fluid rounded" alt="">
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-end">
+
+                                <a href="#" class="dropdown-item">Logout</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <main class="content px-3 py-2">
+                <div class="container-fluid">
+
+                    <!-- content starts here -->
+
+
+                    <div class="container-fluid p-4">
+                        <div class="card shadow">
+                            <div
+                                class="card-header bg-primary text-white d-flex justify-content-between align-items-center">
+                                <h5 class="card-title mb-0">Accounts</h5>
+                                <button type="button" class="btn btn-warning text-white" data-bs-toggle="modal"
+                                    data-bs-target="#addUserModal">
+                                    <i class="bi bi-plus-circle me-2"></i>Add User
+                                </button>
+                            </div>
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <table class="table table-hover align-middle">
+                                        <thead class="table-light">
+                                            <tr>
+                                                <th>ID</th>
+                                                <th>First Name</th>
+                                                <th>Last Name</th>
+                                                <th>Phone</th>
+                                                <th>Email</th>
+                                                <th>Address</th>
+                                                <th>Nationality</th>
+                                                <th>Status</th>
+                                                <th>User Type</th>
+                                                <th>Actions</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>2</td>
+                                                <td>Admin</td>
+                                                <td>User</td>
+                                                <td>555-123-4567</td>
+                                                <td>admin@pigeon.com</td>
+                                                <td>456 Admin St</td>
+                                                <td>SG</td>
+                                                <td><span class="badge bg-success">Active</span></td>
+                                                <td>Admin</td>
+                                                <td>
+                                                    <div class="btn-group btn-group-sm">
+                                                        <button class="btn btn-primary me-2" title="Edit Details">
+                                                            <i class="fa-solid fa-pen-to-square"></i>
+                                                        </button>
+                                                        <button class="btn btn-secondary" title="Delete User">
+                                                            <i class="fa-solid fa-trash"></i>
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>3</td>
+                                                <td>Bar</td>
+                                                <td>Staff</td>
+                                                <td>555-789-0123</td>
+                                                <td>barstaff@pigeon.com</td>
+                                                <td>789 Bar Ave</td>
+                                                <td>SG</td>
+                                                <td><span class="badge bg-success">Active</span></td>
+                                                <td>Bar Staff</td>
+                                                <td>
+                                                    <div class="btn-group btn-group-sm">
+                                                        <button class="btn btn-primary me-2" title="Edit Details">
+                                                            <i class="fa-solid fa-pen-to-square"></i>
+                                                        </button>
+                                                        <button class="btn btn-secondary" title="Delete User">
+                                                            <i class="fa-solid fa-trash"></i>
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>4</td>
+                                                <td>Hotel</td>
+                                                <td>Staff</td>
+                                                <td>555-456-7890</td>
+                                                <td>staff@pigeon.com</td>
+                                                <td>321 Staff Rd</td>
+                                                <td>SG</td>
+                                                <td><span class="badge bg-success">Active</span></td>
+                                                <td>Staff</td>
+                                                <td>
+                                                    <div class="btn-group btn-group-sm">
+                                                        <button class="btn btn-primary me-2" title="Edit Details">
+                                                            <i class="fa-solid fa-pen-to-square"></i>
+                                                        </button>
+                                                        <button class="btn btn-secondary" title="Delete User">
+                                                            <i class="fa-solid fa-trash"></i>
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>5</td>
+                                                <td>Resort</td>
+                                                <td>Owner</td>
+                                                <td>555-999-8888</td>
+                                                <td>owner@pigeon.com</td>
+                                                <td>100 Owner Lane</td>
+                                                <td>SG</td>
+                                                <td><span class="badge bg-success">Active</span></td>
+                                                <td>Owner</td>
+                                                <td>
+                                                    <div class="btn-group btn-group-sm">
+                                                        <button class="btn btn-primary me-2" title="Edit Details">
+                                                            <i class="fa-solid fa-pen-to-square"></i>
+                                                        </button>
+                                                        <button class="btn btn-secondary" title="Delete User">
+                                                            <i class="fa-solid fa-trash"></i>
+                                                        </button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>John</td>
+                                                <td>Doe</td>
+                                                <td>123-456-7890</td>
+                                                <td>john@example.com</td>
+                                                <td>123 Street</td>
+                                                <td>US</td>
+                                                <td><span class="badge bg-success">Active</span></td>
+                                                <td>Customer</td>
+                                                <td>
+                                                    <div class="btn-group btn-group-sm">
+
+
+                                                        <button class="btn btn-primary me-2" title="Edit Details">
+                                                            <i class="fa-solid fa-pen-to-square"></i>
+
+                                                        </button>
+
+                                                        <button class="btn btn-secondary" title="Delete User">
+                                                            <i class="fa-solid fa-trash"></i>
+                                                        </button>
+
+
+                                                    </div>
+                                                </td>
+                                            </tr>
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+
+                    <!-- content end -->
+
+                </div>
+            </main>
+
+
+
+
+
+
+
+
+
+
+        </div>
+    </div>
+
+
+
+    <!-- Add User Modal -->
+    <div class="modal fade" id="addUserModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header bg-primary text-white">
+                    <h5 class="modal-title">Add New User</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label class="form-label">First Name</label>
+                            <input type="text" class="form-control">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Last Name</label>
+                            <input type="text" class="form-control">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Phone</label>
+                            <input type="tel" class="form-control">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Email</label>
+                            <input type="email" class="form-control">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Address</label>
+                            <textarea class="form-control"></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Password</label>
+                            <input type="password" class="form-control">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Nationality</label>
+                            <input type="text" class="form-control">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Status</label>
+                            <select class="form-select">
+                                <option value="active">Active</option>
+                                <option value="inactive">Inactive</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">User Type</label>
+                            <select class="form-select">
+                                <option value="admin">Admin</option>
+                                <option value="customer">Customer</option>
+                            </select>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save User</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+
+
+
+
+        const sidebarToggle = document.querySelector("#sidebar-toggle");
+        sidebarToggle.addEventListener("click", function () {
+            document.querySelector("#sidebar").classList.toggle("collapsed");
+        });
+
+
+
+
+
+    </script>
+</body>
+
+</html>

@@ -2,27 +2,21 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Pigeon Resort | Staff Facilities</title>
 
-  <link rel="icon" href="../assets/images/logo.webp" type="image/webp">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css">
+  <link rel="icon" href="../assets/images/logo.webp" type="image/webp" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" />
   <script src="https://kit.fontawesome.com/ae360af17e.js" crossorigin="anonymous"></script>
   <link href="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.css" rel="stylesheet" />
   <!-- Font Awesome CDN -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
 
-
-
-
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-  <link rel="stylesheet" href="../staff/css/staff_facilities.css">
-
-
-
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+  <link rel="stylesheet" href="../staff/css/staff_facilities.css" />
 </head>
 
 <body>
@@ -116,10 +110,9 @@
           <ul class="navbar-nav">
             <li class="nav-item dropdown">
               <a href="#" data-bs-toggle="dropdown" class="nav-icon pe-md-0">
-                <img src="../staff/images/user.png" class="avatar img-fluid rounded" alt="">
+                <img src="../staff/images/user.png" class="avatar img-fluid rounded" alt="" />
               </a>
               <div class="dropdown-menu dropdown-menu-end">
-
                 <a href="#" class="dropdown-item">Logout</a>
               </div>
             </li>
@@ -128,10 +121,7 @@
       </nav>
       <main class="content px-3 py-2">
         <div class="container-fluid">
-
           <!-- content starts here -->
-
-
 
           <div class="container-fluid p-4">
             <div class="card shadow">
@@ -170,10 +160,15 @@
                         <td>2</td>
                         <td>P 3,500.00</td>
                         <td>
-                          <img src="/api/placeholder/50/50" alt="Image" class="img-thumbnail"
-                            style="width: 50px; height: 50px; object-fit: cover;">
+                          <img src="/api/placeholder/50/50" alt="Image" class="img-thumbnail" style="
+                                width: 50px;
+                                height: 50px;
+                                object-fit: cover;
+                              " />
                         </td>
-                        <td><span class="badge bg-success">Available</span></td>
+                        <td>
+                          <span class="badge bg-success">Available</span>
+                        </td>
                         <td>
                           <div class="btn-group btn-group-sm">
                             <button class="btn btn-primary me-2" title="Edit Room">
@@ -194,8 +189,11 @@
                         <td>4</td>
                         <td>P 5,500.00</td>
                         <td>
-                          <img src="/api/placeholder/50/50" alt="Image" class="img-thumbnail"
-                            style="width: 50px; height: 50px; object-fit: cover;">
+                          <img src="/api/placeholder/50/50" alt="Image" class="img-thumbnail" style="
+                                width: 50px;
+                                height: 50px;
+                                object-fit: cover;
+                              " />
                         </td>
                         <td><span class="badge bg-danger">Occupied</span></td>
                         <td>
@@ -218,10 +216,15 @@
                         <td>2</td>
                         <td>P 2,500.00</td>
                         <td>
-                          <img src="/api/placeholder/50/50" alt="Image" class="img-thumbnail"
-                            style="width: 50px; height: 50px; object-fit: cover;">
+                          <img src="/api/placeholder/50/50" alt="Image" class="img-thumbnail" style="
+                                width: 50px;
+                                height: 50px;
+                                object-fit: cover;
+                              " />
                         </td>
-                        <td><span class="badge bg-warning">Maintenance</span></td>
+                        <td>
+                          <span class="badge bg-warning">Maintenance</span>
+                        </td>
                         <td>
                           <div class="btn-group btn-group-sm">
                             <button class="btn btn-primary me-2" title="Edit Room">
@@ -240,15 +243,9 @@
             </div>
           </div>
 
-
-
-
-
-
           <!-- content ends here -->
         </div>
       </main>
-
 
       <!-- modal start -->
 
@@ -258,16 +255,17 @@
         <div class="modal-dialog modal-lg">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title" id="addRoomModalLabel">Add New Facility</h5>
+              <h5 class="modal-title" id="addRoomModalLabel">
+                Add New Facility
+              </h5>
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
               <form id="addFacilityForm">
                 <div class="row g-3">
-
                   <div class="col-md-6">
                     <label for="facilityName" class="form-label">Facility Name</label>
-                    <input type="text" class="form-control" name="name" id="facilityName" required>
+                    <input type="text" class="form-control" name="name" id="facilityName" required />
                   </div>
                   <div class="col-md-6">
                     <label for="facilityType" class="form-label">Facility Type</label>
@@ -280,13 +278,13 @@
                   </div>
                   <div class="col-md-6">
                     <label for="capacity" class="form-label">Capacity</label>
-                    <input type="number" class="form-control" name="capacity" id="capacity" required min="1">
+                    <input type="number" class="form-control" name="capacity" id="capacity" required min="1" />
                   </div>
                   <div class="col-md-6">
                     <label for="price" class="form-label">Price</label>
                     <div class="input-group">
                       <span class="input-group-text">₱</span>
-                      <input type="number" class="form-control" name="price" id="price" required min="0" step="0.01">
+                      <input type="number" class="form-control" name="price" id="price" required min="0" step="0.01" />
                     </div>
                   </div>
                   <div class="col-md-6">
@@ -304,38 +302,33 @@
                   </div>
                   <div class="col-12">
                     <label for="facilityImage" class="form-label">Facility Image</label>
-                    <input type="file" class="form-control" name="image" id="facilityImage" accept="image/*" required>
+                    <input type="file" class="form-control" name="image" id="facilityImage" accept="image/*" required />
                   </div>
                 </div>
               </form>
             </div>
             <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-              <button type="submit" form="addRoomForm" class="btn btn-primary">Add Facility</button>
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                Close
+              </button>
+              <button type="submit" form="addRoomForm" class="btn btn-primary">
+                Add Facility
+              </button>
             </div>
           </div>
         </div>
       </div>
 
-
       <!-- modal end -->
-
-
     </div>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"></script>
 
   <script>
-
-
-
-
     const sidebarToggle = document.querySelector("#sidebar-toggle");
     sidebarToggle.addEventListener("click", function () {
       document.querySelector("#sidebar").classList.toggle("collapsed");
     });
-
-
   </script>
 </body>
 

@@ -5,7 +5,8 @@
 ::before {
     box-sizing: border-box;
 }
-:root{
+
+:root {
     --primary-blue: #1a73e8;
 }
 
@@ -175,16 +176,17 @@ a.sidebar-link {
 .stat-card {
     transition: transform 0.2s;
 }
+
 .stat-card:hover {
     transform: translateY(-5px);
 }
 
 .event-dot.booking {
-    background-color: #007bff; /* Blue */
-  }
-  .event-dot.reservation {
-    background-color: #ffc107; /* Yellow */
-  }
- 
+    background-color: #007bff;
+    /* Blue */
+}
 
-  
+.event-dot.reservation {
+    background-color: #ffc107;
+    /* Yellow */
+}

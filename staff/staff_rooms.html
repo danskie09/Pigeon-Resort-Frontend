@@ -145,6 +145,23 @@
                   <i class="bi bi-plus-lg text-white"></i>
                 </a>
               </div>
+              <div class="filters-section">
+                <button class="filter-pill active">
+                  <i class="bi bi-grid"></i>All
+                </button>
+                <button class="filter-pill">
+                  <i class="bi bi-check-circle"></i>Available
+                </button>
+                <button class="filter-pill">
+                  <i class="bi bi-person-fill"></i>Occupied
+                </button>
+                <button class="filter-pill">
+                  <i class="bi bi-tools"></i>Maintenance
+                </button>
+                <button class="filter-pill">
+                  <i class="bi bi-star"></i>Premium
+                </button>
+              </div>
               <div class="card-body">
                 <div class="table-responsive table-container">
                   <table class="table table-hover align-middle">
@@ -277,7 +294,10 @@
         <div class="modal-dialog modal-lg">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title" id="addRoomModalLabel">Add New Room</h5>
+              <h5 class="modal-title" id="addRoomModalLabel">
+                <i class="bi bi-plus-circle"></i>
+                Add New Room
+              </h5>
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
@@ -285,34 +305,39 @@
                 <div class="row g-3">
                   <div class="col-md-6">
                     <label for="roomNumber" class="form-label">Room Number</label>
-                    <input type="text" class="form-control" name="number" id="roomNumber" required>
+                    <input type="text" class="form-control" name="number" id="roomNumber"
+                      placeholder="Enter room number" required>
                   </div>
                   <div class="col-md-6">
                     <label for="roomName" class="form-label">Room Name</label>
-                    <input type="text" class="form-control" name="name" id="roomName" required>
+                    <input type="text" class="form-control" name="name" id="roomName" placeholder="Enter room name"
+                      required>
                   </div>
                   <div class="col-md-6">
                     <label for="roomType" class="form-label">Room Type</label>
                     <select class="form-select" name="type" id="roomType" required>
                       <option value="">Select room type</option>
-                      <option value="Standard">Standard</option>
-                      <option value="Deluxe">Deluxe</option>
-                      <option value="Suite">Suite</option>
+                      <option value="Standard">Standard Room</option>
+                      <option value="Deluxe">Deluxe Room</option>
+                      <option value="Suite">Suite Room</option>
+                      <option value="Premium">Premium Room</option>
                     </select>
                   </div>
                   <div class="col-md-6">
                     <label for="capacity" class="form-label">Capacity</label>
-                    <input type="number" class="form-control" name="capacity" id="capacity" required min="1">
+                    <input type="number" class="form-control" name="capacity" id="capacity"
+                      placeholder="Enter room capacity" required min="1">
                   </div>
                   <div class="col-md-6">
-                    <label for="price" class="form-label">Price</label>
+                    <label for="price" class="form-label">Price per Night</label>
                     <div class="input-group">
                       <span class="input-group-text">₱</span>
-                      <input type="number" class="form-control" name="price" id="price" required min="0" step="0.01">
+                      <input type="number" class="form-control" name="price" id="price" placeholder="Enter price"
+                        required min="0" step="0.01">
                     </div>
                   </div>
                   <div class="col-md-6">
-                    <label for="status" class="form-label">Status</label>
+                    <label for="status" class="form-label">Room Status</label>
                     <select class="form-select" name="status" id="status" required>
                       <option value="">Select status</option>
                       <option value="Available">Available</option>
@@ -321,8 +346,9 @@
                     </select>
                   </div>
                   <div class="col-12">
-                    <label for="description" class="form-label">Description</label>
-                    <textarea class="form-control" name="description" id="description" rows="3" required></textarea>
+                    <label for="description" class="form-label">Room Description</label>
+                    <textarea class="form-control" name="description" id="description" rows="3"
+                      placeholder="Enter room description" required></textarea>
                   </div>
                   <div class="col-12">
                     <label for="roomImage" class="form-label">Room Image</label>
@@ -332,8 +358,11 @@
               </form>
             </div>
             <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-              <button type="submit" form="addRoomForm" class="btn btn-primary">Add Room</button>
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+              <button type="submit" form="addRoomForm" class="btn btn-primary">
+                <i class="bi bi-plus-lg me-1"></i>
+                Add Room
+              </button>
             </div>
           </div>
         </div>

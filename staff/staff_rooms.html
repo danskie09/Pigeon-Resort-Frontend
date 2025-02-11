@@ -132,103 +132,122 @@
 
           <div class="container-fluid py-4 px-0">
             <div class="card shadow">
-              <!-- Add this button just below the card-header div -->
-              <div class="card-header bg-primary text-white d-flex justify-content-between align-items-center">
-
-                <h5 class="card-title mb-0">Room Management</h5>
-
-
-
-                <a type="button" class="btn text-white" title="Add Room" data-bs-toggle="modal"
-                  data-bs-target="#addRoomModal">
-                  <i class="bi bi-plus-circle fs-5 me-2"></i>
-              </a>
+              <div class="card-header">
+                <div class="header-title-section">
+                  <i class="bi bi-building header-icon"></i>
+                  <h5 class="card-title">Room Management</h5>
+                  <span class="stats-badge">
+                    <i class="bi bi-circle-fill me-1" style="font-size: 0.5rem;"></i>
+                    12 Active Rooms
+                  </span>
+                </div>
+                <a class="add-room-btn" title="Add Room" data-bs-toggle="modal" data-bs-target="#addRoomModal">
+                  <i class="bi bi-plus-lg text-white"></i>
+                </a>
               </div>
               <div class="card-body">
-                <div class="table-responsive">
+                <div class="table-responsive table-container">
                   <table class="table table-hover align-middle">
-                    <thead class="table-light">
+                    <thead>
                       <tr>
-                        <th>Room ID</th>
-                        <th>Number</th>
-                        <th>Name</th>
-                        <th>Description</th>
-                        <th>Room Type</th>
-                        <th>Capacity</th>
-                        <th>Price</th>
-                        <th>Image</th>
-                        <th>Status</th>
-                        <th>Actions</th>
+                        <th class="col-id">
+                          Room ID
+                          <i class="bi bi-arrow-down-up sort-icon"></i>
+                        </th>
+                        <th class="col-number">
+                          Number
+                          <i class="bi bi-arrow-down-up sort-icon"></i>
+                        </th>
+                        <th class="col-name">
+                          Name
+                          <i class="bi bi-arrow-down-up sort-icon"></i>
+                        </th>
+                        <th class="col-description">Description</th>
+                        <th class="col-type">
+                          Room Type
+                          <i class="bi bi-arrow-down-up sort-icon"></i>
+                        </th>
+                        <th class="col-capacity">
+                          Capacity
+                          <i class="bi bi-arrow-down-up sort-icon"></i>
+                        </th>
+                        <th class="col-price">
+                          Price
+                          <i class="bi bi-arrow-down-up sort-icon"></i>
+                        </th>
+                        <th class="col-image">Image</th>
+                        <th class="col-status">
+                          Status
+                          <i class="bi bi-arrow-down-up sort-icon"></i>
+                        </th>
+                        <th class="col-actions">Actions</th>
                       </tr>
                     </thead>
                     <tbody>
                       <tr>
-                        <td><span class="fw-medium">RM-001</span></td>
+                        <td><span class="room-id">RM-001</span></td>
                         <td>101</td>
                         <td>Deluxe Room</td>
                         <td>Spacious room with city view</td>
                         <td>Deluxe</td>
                         <td>2</td>
-                        <td>P 3,500.00</td>
+                        <td class="price-column">₱ 3,500.00</td>
                         <td>
-                          <img src="/api/placeholder/50/50" alt="Room Image" class="img-thumbnail"
-                            style="width: 50px; height: 50px; object-fit: cover;">
+                          <img src="/api/placeholder/50/50" alt="Room Image" class="room-image">
                         </td>
-                        <td><span class="badge bg-success">Available</span></td>
+                        <td><span class="status-badge status-available">Available</span></td>
                         <td>
-                          <div class="btn-group btn-group-sm">
-                            <button class="btn btn-primary me-2" title="Edit Room">
-                              <i class="bi bi-pencil text-light"></i>
+                          <div class="action-buttons">
+                            <button class="action-btn edit-btn" title="Edit Room">
+                              <i class="bi bi-pencil"></i>
                             </button>
-                            <button class="btn btn-secondary" title="Delete Room">
+                            <button class="action-btn delete-btn" title="Delete Room">
                               <i class="bi bi-trash"></i>
                             </button>
                           </div>
                         </td>
                       </tr>
                       <tr>
-                        <td><span class="fw-medium">RM-002</span></td>
+                        <td><span class="room-id">RM-002</span></td>
                         <td>102</td>
                         <td>Suite Room</td>
                         <td>Luxury suite with ocean view</td>
                         <td>Suite</td>
                         <td>4</td>
-                        <td>P 5,500.00</td>
+                        <td class="price-column">₱ 5,500.00</td>
                         <td>
-                          <img src="/api/placeholder/50/50" alt="Room Image" class="img-thumbnail"
-                            style="width: 50px; height: 50px; object-fit: cover;">
+                          <img src="/api/placeholder/50/50" alt="Room Image" class="room-image">
                         </td>
-                        <td><span class="badge bg-danger">Occupied</span></td>
+                        <td><span class="status-badge status-occupied">Occupied</span></td>
                         <td>
-                          <div class="btn-group btn-group-sm">
-                            <button class="btn btn-primary me-2" title="Edit Room">
-                              <i class="bi bi-pencil text-light"></i>
+                          <div class="action-buttons">
+                            <button class="action-btn edit-btn" title="Edit Room">
+                              <i class="bi bi-pencil"></i>
                             </button>
-                            <button class="btn btn-secondary" title="Delete Room">
+                            <button class="action-btn delete-btn" title="Delete Room">
                               <i class="bi bi-trash"></i>
                             </button>
                           </div>
                         </td>
                       </tr>
                       <tr>
-                        <td><span class="fw-medium">RM-003</span></td>
+                        <td><span class="room-id">RM-003</span></td>
                         <td>103</td>
                         <td>Standard Room</td>
                         <td>Comfortable room with garden view</td>
                         <td>Standard</td>
                         <td>2</td>
-                        <td>P 2,500.00</td>
+                        <td class="price-column">₱ 2,500.00</td>
                         <td>
-                          <img src="/api/placeholder/50/50" alt="Room Image" class="img-thumbnail"
-                            style="width: 50px; height: 50px; object-fit: cover;">
+                          <img src="/api/placeholder/50/50" alt="Room Image" class="room-image">
                         </td>
-                        <td><span class="badge bg-warning">Maintenance</span></td>
+                        <td><span class="status-badge status-maintenance">Maintenance</span></td>
                         <td>
-                          <div class="btn-group btn-group-sm">
-                            <button class="btn btn-primary me-2" title="Edit Room">
-                              <i class="bi bi-pencil text-light"></i>
+                          <div class="action-buttons">
+                            <button class="action-btn edit-btn" title="Edit Room">
+                              <i class="bi bi-pencil"></i>
                             </button>
-                            <button class="btn btn-secondary" title="Delete Room">
+                            <button class="action-btn delete-btn" title="Delete Room">
                               <i class="bi bi-trash"></i>
                             </button>
                           </div>
